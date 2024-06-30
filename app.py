@@ -156,3 +156,10 @@ def iching():
 
             if st.session_state['logged_in']:
                 st.session_state['buttons_locked'] = False
+
+
+def humandesign():
+    
+
+    st.write("Your Human Design Chart:")
+    st.components.v1.iframe("https://embed.bodygraphchart.com/v1/13934/iframe?token=0190b9df-2f0a-40aa-af2e-bd3ccde165f5", width=800, height=600)
