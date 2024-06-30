@@ -1,0 +1,1149 @@
+{
+    "111111":{
+      "position":["0","40","0"],   
+      "number": "1",
+      "name": "THE CREATIVE",
+      "gate": "2",
+      "center": "G",
+      "channel": "8",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel a deep need to express your authenticity and your whole self in everything you do. Whatever you do, you will do it in your unique style that characterises you and that will help you bring something to the world that no one has seen before and that no one else can replicate., 2- You have the ability to be in the right direction as long as you follow your Strategy and Authority and to bring the vision of where others need to go to find the resources required to support their creative endeavours and to guide them in that direction.",
+      "lines": [
+        "Objectivity",
+        "The energy to attract society",
+        "Aloneness as the medium of creativity",
+        "The energy to sustain creative work",
+        "Love is light",
+        "Creation is independent of will"
+      ]
+    }, 
+    "000000":{
+      "position":["0","36","0"],
+      "number": "2",
+      "name": "THE RECEPTIVE",
+      "gate": "1",
+      "center": "G",
+      "channel": "14",
+      "circuit": "Individual/Knowing",
+      "lines": [
+        "Fixation",
+        "Intelligent application",
+        "Secretiveness",
+        "Patience",
+        "Genius",
+        "Intuition"
+      ]
+    },
+    "100010":{
+      "position":["0","8","0"],
+      "number": "3",
+      "name": "DIFFICULTY AT THE BEGINNING",
+      "gate": "50",
+      "center": "Sacral",
+      "channel": "60",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to transcend confusion and bring order to the chaos that comes with all that is new to find meaning in change so that it is accepted, assimilated by others and takes hold in the world.",
+      "lines": [
+        "Surrender",
+        "Victimization",
+        "Charisma",
+        "Survival",
+        "Immaturity",
+        "Synthesis"
+      ]
+    },
+    "010001":{
+      "position":["0.25","56","0"],
+      "number": "4",
+      "name": "YOUTHFUL FOLLY",
+      "gate": "49",
+      "center": "Ajna",
+      "channel": "63",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel pressure to find theories, solutions, formulas, patterns... that you can apply to solve situations and problems common to all, always seeking to fix anything at any time and in any way",
+      "lines": [
+        "Excess",
+        "Seduction",
+        "The liar",
+        "Irresponsibility",
+        "Acceptance",
+        "Pleasure"
+      ]
+    },
+    "111010":{
+      "position":["-0.1","12","0"],
+      "number": "5",
+      "name": "WAITING",
+      "gate": "35",
+      "center": "Sacral",
+      "channel": "15",
+      "circuit": "Individual/Knowing",
+      "definition":"You find satisfaction in your rituals and routines and these help you to maintain your momentum in the expectation of the next move, so every time something or someone takes you away from them, it destabilises you and you feel insecure.",
+      "lines": [
+        "Yielding",
+        "Joy",
+        "The hunter",
+        "Compulsiveness",
+        "Inner peace",
+        "Perseverance"
+      ]
+    }, 
+    "010111":{
+      "position":["-1.25","39","0"],
+      "number": "6",
+      "name": "CONFLICT",
+      "gate": "36",
+      "center": "Solar",
+      "channel": "59",
+      "circuit": "Individual/Knowing",
+      "lines": [
+        "The peacemaker",
+        "Arbitration",
+        "Triumph",
+        "Allegiance",
+        "The guerilla",
+        "Retreat"
+      ]
+    },
+    "010000":{
+      "position":["-0.25","39","0"],
+      "number": "7",
+      "name": "THE ARMY",
+      "gate": "13",
+      "center": "G",
+      "channel": "31",
+      "circuit": "Individual/Knowing",
+      "definition":"You are a natural leader designed to support, influence and provide direction to those that lead publicly because you can assess existing patterns and direction with an eye to the future and modify them or create new ones to get there.",
+      "lines": [
+        "The administrator",
+        "The general",
+        "The abdicator",
+        "The anarchist",
+        "The democrat",
+        "Authoritarian"
+      ]
+    },
+    "000010":{
+      "position":["0","43","0"],
+      "number": "8",
+      "name": "HOLDING TOGETHER",
+      "gate": "1",
+      "center": "Throat",
+      "channel": "1",
+      "circuit": "Individual/Knowing",
+      "definition":"You are able to make a difference and have a strong drive to contribute to the world through your own lifestyle, direction and creations, or by promoting the creations and innovations of others by drawing people's attention to them.",
+      "lines": [
+        "Communion",
+        "Dharma",
+        "Respect",
+        "The phoney",
+        "Service",
+        "Honesty"
+      ]
+    },
+    "111011":{
+      "position":["0.1","9","0"],
+      "number": "9",
+      "name": "THE TAMING POWER OF THE SMALL",
+      "gate": "16",
+      "center": "Sacral",
+      "channel": "52",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to focus your energy on details and test or evaluate formulas to organise a step-by-step, detail-by-detail path towards your vision of the future in the way that is easiest and most comfortable to walk.",
+      "lines": [
+        "Gratitude",
+        "Faith",
+        "Dedication",
+        "The straw that breaks the camel's back",
+        "Misery loves company",
+        "Sensibility"
+      ]
+    },
+    "110111":{
+      "position":["-0.25","38","0"],
+      "number": "10",
+      "name": "TREADING",
+      "gate": "15",
+      "center": "Self",
+      "channel": "Inspiration",
+      "circuit": ["20","34","57"],
+      "definition":"You have the potential to empower others to accept and love themselves when you surrender and live authentically as yourself, accepting and loving what makes you unique and being you no matter what.",
+      "lines": [
+        "The role model",
+        "The heretic",
+        "The opportunist",
+        "The martyr",
+        "The hermit",
+        "Modesty"
+      ]
+    },
+    "111000":{
+      "position":["0.25","55","0"],
+      "number": "11",
+      "name": "PEACE",
+      "gate": "12",
+      "center": "Ajna",
+      "channel": "56",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to conceptualise possibilities and bring incredible and spectacular ideas into the world to pass on to others so that whoever is called to shape them or take action on them will do so.",
+      "lines": [
+        "Adaptability",
+        "The philanthropist",
+        "The teacher",
+        "The realist",
+        "Rigour",
+        "Attunement"
+      ]
+    },
+    "000111":{
+      "position":["1.50","40","0"],
+      "number": "44",
+      "name": "STANDSTILL",
+      "gate": "11",
+      "center": "Self",
+      "channel": "22",
+      "circuit": "Individual/Knowing",
+      "definition":"You are capable of saying transformative and unique things that impact people, however, you need to be cautious and not get caught up in the impulse to speak or act if you are not in the mood and wait until you are in the mood to express it creatively.",
+      "lines": [
+        "Metamorphosis",
+        "The pragmatist",
+        "The prophet",
+        "Confession",
+        "Purification",
+        "The monk"
+      ]
+    },
+    "101111":{
+      "position":["0.25","39","0"],
+      "number": "13",
+      "name": "THE FELLOWSHIP OF MAN",
+      "gate": "7",
+      "center": "G",
+      "channel": "33",
+      "circuit": "Individual/Knowing",
+      "definition":"Without realising it, others tell you about their experiences, adventures, challenges..., and when that happens, you are able to help them through their own stories thanks to your innate gift for listening and the wisdom you have accumulated throughout your life.",
+      "lines": [
+        "The optimist",
+        "The saviour",
+        "Fatigue",
+        "Pessimism",
+        "Bigotry",
+        "Empathy"
+      ]
+    },
+    "111101":{
+      "position":["0","13","0"],
+      "number": "14",
+      "name": "POSSESSION IN GREAT MEASURE",
+      "gate": "8",
+      "center": "Sacral",
+      "channel": "2",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the potential to generate wealth and power by doing what you love and loving what you do, using your skills and investing your energy and efforts in what brings you satisfaction and fulfilment and is of benefit to others.",
+      "lines": [
+        "Humility",
+        "Arrogance",
+        "Security",
+        "Service",
+        "Management",
+        "Money isn't everything"
+      ]
+    },
+    "001000":{
+      "position":["-0.25","37","0"],
+      "number": "15",
+      "name": "MODESTY",
+      "gate": "10",
+      "center": "G",
+      "channel": "5",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to adjust and adapt your pace to changing circumstances and other rhythms as they arise because of your fluidity and that you do not have a fixed patterns but accept diverse and opposing rhythms and extremes without judgement.",
+      "lines": [
+        "Self-defense",
+        "Sensitivity",
+        "The wallflower",
+        "Ego inflation",
+        "Influence",
+        "Duty"
+      ]
+    },
+    "000100":{
+      "position":["-0.25","47","0"],
+      "number": "16",
+      "name": "ENTHUSIASM",
+      "gate": "9",
+      "center": "Throat",
+      "channel": "48",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to be proficient in many skills that you identify with and to perfect them through repetition, practice, effort and dedication to eventually master them beyond technique to mastery and become one with it.",
+      "lines": [
+        "Gullibility",
+        "The grinch",
+        "The leader",
+        "Independence",
+        "The cynic",
+        "Delusion"
+      ]
+    },
+    "100110":{
+      "position":["-0.25","55","0"],
+      "number": "17",
+      "name": "FOLLOWING",
+      "gate": "18",
+      "center": "Ajna",
+      "channel": "62",
+      "circuit": "Individual/Knowing",
+      "definition":"You recognise different patterns and form a logical opinion about a possible solution or the viability of a pattern that everyone can trust and that will survive testing and criticism once you express it.",
+      "lines": [
+        "The bodhisattva",
+        "No human is an island",
+        "The personnel manager",
+        "Understanding",
+        "Discrimination",
+        "Openness"
+      ]
+    },
+    "011001":{
+      "position":["-1","-1","0"],
+      "number": "18",
+      "name": "WORK ON WHAT HAS BEEN SPOILT",
+      "gate": "17",
+      "center": "Splenic",
+      "channel": "58",
+      "circuit": "Individual/Knowing",
+      "Definition":"You have a gift for identifying the faulty pattern and seeing what is wrong and the different ways to correct, modify or replace it in order to improve it and make it work productively in a constant search for perfection.",
+      "lines": [
+        "Buddhahood",
+        "Therapy",
+        "The incompetent",
+        "The zealot",
+        "Terminal disease",
+        "Conservatism"
+      ]
+    },
+    "110000":{
+      "position":["0.1","2","0"],
+      "number": "19",
+      "name": "APPROACH",
+      "gate": "33",
+      "center": "Root",
+      "channel": "49",
+      "circuit": "Individual/Knowing",
+      "definition":"Your sensitivity helps you to tune into the needs of others and then make others aware of what resources are needed so that all survive and thrive on a personal and community level.",
+      "lines": [
+        "The recluse",
+        "Sacrifice",
+        "The team player",
+        "Dedication",
+        "Service",
+        "Interdependence"
+      ]
+    },
+    "000011":{
+      "position":["-0.25","46","0"],
+      "number": "20",
+      "name": "CONTEMPLATION",
+      "gate": "34",
+      "center": "Self",
+      "channel": ["10","34","57"],
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to be present in the now and to transform that awareness of the now into the right actions and words in the right present moment to survive as yourself and to impact the people around you.",
+      "lines": [
+        "Wisdom",
+        "Realism",
+        "Application",
+        "Self-awareness",
+        "The dogmatist",
+        "Superficiality"
+      ]
+    },
+    "100101":{
+      "position":["1","37","0"],
+      "number": "21",
+      "name": "BITING THROUGH",
+      "gate": "48",
+      "center": "Heart",
+      "channel": "45",
+      "circuit": "Individual/Knowing",
+      "definition":"You are successful when you control your own material resources and are in a position of control within the community, making the important decisions, especially about money, food, territory and lifestyle in order to ensure its well-being.",
+      "lines": [
+        "Chaos",
+        "Objectivity",
+        "Strategy",
+        "Powerlessness",
+        "Might is right",
+        "Warning"
+      ]
+    },
+    "101001":{
+      "position":["1.75","47","0"],
+      "number": "22",
+      "name": "GRACE",
+      "gate": "47",
+      "center": "Solar",
+      "channel": "12",
+      "circuit": "Individual/Knowing",
+      "definition":"You have a very attractive grace and charm when you are in the right mood, and a more antisocial side when your mood changes. It is important that you do not succumb to pressure to express your feelings.",
+      "lines": [
+        "Maturity",
+        "Directness",
+        "Sensitivity",
+        "The enchanter",
+        "Charm school",
+        "Second class ticket"
+      ]
+    },
+    "000001":{
+      "position":["0","48","0"],
+      "number": "23",
+      "name": "SPLITTING APART",
+      "gate": "43",
+      "center": "Throat",
+      "channel": "43",
+      "circuit": "Individual/Knowing",
+      "definition":"You have a gift for clearly expressing innovative, different and transforming concepts and ideas, thanks to your ability to break down complex concepts into simpler ones which are easy for others to assimilate.",
+      "lines": [
+        "Fusion",
+        "Assimilation",
+        "Fragmentation",
+        "Individuality",
+        "Self-defense",
+        "Proselytization"
+      ]
+    },
+    "100000":{
+      "position":["0","56","0"],
+      "number": "24",
+      "name": "RETURNING",
+      "gate": "44",
+      "center": "Ajna",
+      "channel": "61",
+      "circuit": "Individual/Knowing",
+      "definition":"You go back to the beginning of an idea a thousand times to refine and shape the answer to determine its value, to know what is missing or to understand it better, in order to rationalise the new and make it assimilable for others to accept.",
+      "lines": [
+        "The gift horse",
+        "Confession",
+        "The hermit",
+        "The addict",
+        "Recognition",
+        "The sin of omission"
+      ]
+    },
+    "100111":{
+      "position":["0.25","38","0"],
+      "number": "25",
+      "name": "INNOCENCE",
+      "gate": "46",
+      "center": "Self",
+      "channel": "51",
+      "circuit": "Individual/Knowing",
+      "definition":"You are compassionate, innocent and pure love. You give yourself totally to life out of acceptance and innocence, which enables you to face the various challenges that come your way and always land on your feet no matter what the circumstances.",
+      "lines": [
+        "Ignorance",
+        "Recuperation",
+        "Survival",
+        "Sensibility",
+        "The existentialist",
+        "Selflessness"
+      ]
+    },
+    "111001":{
+      "position":["0.5","35","0"],
+      "number": "26",
+      "name": "THE TAMING POWER OF THE GREAT",
+      "gate": "45",
+      "center": "Heart",
+      "channel": "44",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to manipulate any situation to your advantage and always seek maximum reward for minimum effort. It is your responsibility to maintain the integrity of your persuasive gift and to keep your promises in doing so.",
+      "lines": [
+        "Authority",
+        "Adaptability",
+        "Censorship",
+        "Influence",
+        "The lessons of history",
+        "A bird in the hand"
+      ]
+    },
+    "100001":{
+      "position":["-0.1","10","0"],
+      "number": "27",
+      "name": "NOURISHMENT",
+      "gate": "28",
+      "center": "Sacral",
+      "channel": "50",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel a responsibility to care for others and to maintain and improve their quality of life, but it is vital that you take care of yourself first so that you have the energy and resources to be able to do so without becoming exhausted or ill.",
+      "lines": [
+        "Wariness",
+        "The executor",
+        "Generosity",
+        "Greed",
+        "Self-sufficiency",
+        "Selfishness"
+      ]
+    },
+    "011110":{
+      "position":["-1","37","0"],
+      "number": "28",
+      "name": "PREPONDERANCE OF THE GREAT",
+      "gate": "27",
+      "center": "Splenic",
+      "channel": "50",
+      "circuit": "Individual/Knowing",
+      "definition":"For you, life is a game. You are always up for a challenge, willing to take risks and try new things, and you always try to make the most of life and find the meaning and purpose that make it worth living.",
+      "lines": [
+        "Blaze of glory",
+        "Treachery",
+        "Holding on",
+        "Adventurism",
+        "Shaking hands with the devil",
+        "Preparation"
+      ]
+    },
+    "010010":{
+      "position":["0.1","12","0"],
+      "number": "29",
+      "name": "THE ABYSMAL",
+      "gate": "30",
+      "center": "Sacral",
+      "channel": "46",
+      "circuit": "Individual/Knowing",
+      "definition":"You find it hard to say no and you have the power to commit yourself to a process without knowing where it will lead you because of your perseverance to follow through on what you say yes to, so you have to be careful not to commit yourself to just anything.",
+      "lines": [
+        "Confusion",
+        "Overreach",
+        "Directness",
+        "Evaluation",
+        "Assessment",
+        "The draftee"
+      ]
+    },
+    "101101":{
+      "position":["1","-1","0"],
+      "number": "30",
+      "name": "THE CLINGING FIRE",
+      "gate": "29",
+      "center": "Self",
+      "channel": "41",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel the urge to try all kinds of new things and to acquire, or not, wisdom, which makes you a very intense, creative, passionate person with strong desires, so it is imperative that you arrive at clarity before entering into different experiences.",
+      "lines": [
+        "Enforcement",
+        "Irony",
+        "Burnout",
+        "Resignation",
+        "Pragmatism",
+        "Composure"
+      ]
+    },
+    "001110":{
+      "position":["-0.25","43","0"],
+      "number": "31",
+      "name": "INFLUENCE",
+      "gate": "41",
+      "center": "Self",
+      "channel": "7",
+      "circuit": "Individual/Knowing",
+      "definition":"You are influential and understand the patterns that affect others and know their needs and interests, which helps you to know how to direct them to that better future you see for them so that they can achieve their goals for themselves.",
+      "lines": [
+        "Application",
+        "Self-righteousness",
+        "Intent",
+        "Selectivity",
+        "Arrogance",
+        "Manifestation"
+      ]
+    },
+    "011100":{
+      "position":["-1.50","38","0"],
+      "number": "32",
+      "name": "DURATION",
+      "gate": "42",
+      "center": "Splenic",
+      "channel": "54",
+      "circuit": "Individual/Knowing",
+      "definition":"He has an innate instinct to know the true value of anything or anyone and knows what can succeed and what is best to forget because it won't work, which helps to ensure continuity and long-term success while adapting easily to change.",
+      "lines": [
+        "Tranquillity",
+        "Flexibility",
+        "Right is might",
+        "Lack of continuity",
+        "Restraint",
+        "Conservation"
+      ]
+    },
+    "001111":{
+      "position":["0.25","43","0"],
+      "number": "33",
+      "name": "RETREAT",
+      "gate": "19",
+      "center": "Self",
+      "channel": "13",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the capacity to pull out and share the lessons that can be learned from your own experiences or those of others, but it is vital that you first spend time alone to reflect and decide which lessons to take with you and which to let go of.",
+      "lines": [
+        "Disassociation",
+        "Timing",
+        "Dignity",
+        "Spirit",
+        "Surrender",
+        "Avoidance"
+      ]
+    },
+    "111100":{
+      "position":["-0.1","11","0"],
+      "number": "34",
+      "name": "THE POWER OF THE GREAT",
+      "gate": "20",
+      "center": "Sacral",
+      "channel": ["10","20"],
+      "circuit": "Individual/Knowing",
+      "definition":"You have so much energy and so much power that you are always busy or multitasking, seeking an outlet for that energy and wanting to show how different you are from others, remaining independent and unique in order to survive as yourself.",
+      "lines": [
+        "Common sense",
+        "Annihilation",
+        "Triumph",
+        "Machismo",
+        "Momentum",
+        "The bully"
+      ]
+    },
+    "000101":{
+      "position":["0.25","47","0"],
+      "number": "35",
+      "name": "PROGRESS",
+      "gate": "5",
+      "center": "Throat",
+      "channel": "36",
+      "circuit": "Individual/Knowing",
+      "definition":"You are not interested in repeating experiences in order to master them. What you seek are new experiences and challenges in order to learn from them and gain wisdom so that you can share them with others in the form of advice and bring change and progress.",
+      "lines": [
+        "Rectification",
+        "Altruism",
+        "Hunger",
+        "Collaboration",
+        "Creative block",
+        "Humility"
+      ]
+    },
+    "101000":{
+      "position":["2","42","0"],
+      "number": "36",
+      "name": "THE DARKENING OF THE LIGHT",
+      "gate": "6",
+      "center": "Solar",
+      "channel": "35",
+      "circuit": "Individual/Knowing",
+      "lines": [
+        "Justice",
+        "The underground",
+        "Espionage",
+        "Transition",
+        "Support",
+        "Resistance"
+      ]
+    },
+    "101011":{
+      "position":["1.50","40","0"],
+      "number": "37",
+      "name": "THE FAMILY",
+      "gate": "40",
+      "center": "Solar",
+      "channel": "40",
+      "circuit": "Individual/Knowing",
+      "definition":"You are like the glue of your community because of your ability to hold it together harmoniously with your warmth and kindness and your ability to distribute, plan and collect the resources and skills of the group, making everyone feel part of it.",
+      "lines": [
+        "Purpose",
+        "Love",
+        "Leadership by example",
+        "Evenhandedness",
+        "Responsibility",
+        "The mother/father"
+      ]
+    },
+    "110101":{
+      "position":["-0.1","1","0"],
+      "number": "38",
+      "name": "OPPOSITION",
+      "gate": "39",
+      "center": "Root",
+      "channel": "28",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel pressure to find out what is worth fighting for and to fight for it, facing adversity and always looking for purpose and a reason to live, so when you achieve something without having fought fiercely for it, you find it hard to appreciate it.",
+      "lines": [
+        "Misunderstanding",
+        "Alienation",
+        "Investigation",
+        "Alliance",
+        "Politeness",
+        "Qualification"
+      ]
+    },
+    "001010":{
+      "position":["0.1","1","0"],
+      "number": "39",
+      "name": "OBSTRUCTION",
+      "gate": "38",
+      "center": "Root",
+      "channel": "28",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel pressure to provoke others and to push them to look beyond the immediate appearances of things, although the outcome of your provocation will depend on your own mood at the time of provocation.",
+      "lines": [
+        "The troubleshooter",
+        "Single-mindedness",
+        "Temperance",
+        "Responsibility",
+        "Confrontation",
+        "Disengagement"
+      ]
+    },
+    "010100":{
+      "position":["1.25","35","0"],
+      "number": "40",
+      "name": "DELIVERANCE",
+      "gate": "37",
+      "center": "Heart",
+      "channel": "37",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to work hard to support your family or community, as long as they show you loyalty, appreciate the effort you make for them, and feel that they support you, care for you, and respect your need for time alone to rest.",
+      "lines": [
+        "Decapitation",
+        "Rigidity",
+        "Organization",
+        "Humility",
+        "Resoluteness",
+        "Recuperation"
+      ]
+    },
+    "110001":{
+      "position":["0.1","0","0"],
+      "number": "41",
+      "name": "DECREASE",
+      "gate": "31",
+      "center": "Root",
+      "channel": "30",
+      "circuit": "Individual/Knowing",
+      "definition":"The pressure you feel to experience something new with someone and your drive to satisfy your desires and fulfil your destiny give you the potential to initiate all kinds of experiences and discover new feelings in them.",
+      "lines": [
+        "Contagion",
+        "Authorization",
+        "Correction",
+        "Efficiency",
+        "Caution",
+        "Reasonableness"
+      ]
+    },
+    "100011":{
+      "position":["-0.1","9","0"],
+      "number": "42",
+      "name": "INCREASE",
+      "gate": "32",
+      "center": "Sacral",
+      "channel": "53",
+      "circuit": "Individual/Knowing",
+      "definition":"Your tenacity and commitment give you the ability to finish and close cycles because you know what it takes to complete them and you use the lessons you have learned in the past to maximise their potential and always seek their growth.",
+      "lines": [
+        "Nurturing",
+        "Self-actualization",
+        "The middle man",
+        "Trial and error",
+        "Identification",
+        "Diversification"
+      ]
+    },
+    "111110":{
+      "position":["0","54","0"],
+      "number": "43",
+      "name": "THE GATE OF INSIGHT",
+      "gate": "23",
+      "center": "Self",
+      "channel": "23",
+      "circuit": "Individual/Knowing",
+      "definition":"You have a gift for seeing alternatives to old ways of doing things, possibilities for new and transformative perspectives for others, and outside-the-box ideas that can make a difference thanks to your moments of spontaneous knowledge.",
+      "lines": [
+        "Breakthrough",
+        "Progression",
+        "The one-track mind",
+        "Expediency",
+        "Dedication",
+        "Patience"
+      ]
+    },
+    "011111":{
+      "position":["-1","-1","0"],
+      "number": "44",
+      "name": "THE GATE OF ALERTNESS",
+      "gate": "24",
+      "center": "Splenic",
+      "channel": "26",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to pull out the lessons you have learned from the past and to see why those patterns would be better repeated or why their mistakes should be avoided and to present them to the community in order to survive and meet their material needs.",
+      "lines": [
+        "Aloofness",
+        "Manipulation",
+        "Honesty",
+        "Interference",
+        "Management",
+        "Conditions"
+      ]
+    },
+    "000110":{
+      "position":["0.25","7","0"],
+      "number": "45",
+      "name": "THE GATE OF THE GATHERER",
+      "gate": "26",
+      "center": "Self",
+      "channel": "21",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to manage and administer the resources of your community, bring people together around a common goal, decide who does what and what resources are needed for the community to grow and prosper.",
+      "lines": [
+        "Reconsideration",
+        "Leadership",
+        "Direction",
+        "Exclusion",
+        "Consensus",
+        "Canvassing"
+      ]
+    },  "011000":{
+      "position":["0.25","37","0"],
+      "number": "46",
+      "name": "PUSHING UPWARD",
+      "gate": "25",
+      "center": "Self",
+      "channel": "29",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to give yourself to each experience with all your senses, dedication and determination, losing yourself in it while you are living it so that you can evaluate it once it is over and share what you have learned with others.",
+      "lines": [
+        "Integrity",
+        "Pacing",
+        "Impact",
+        "Projection",
+        "The prima donna",
+        "Being discovered"
+      ]
+    },
+    "010110":{
+      "position":["-0.25","56","0"],
+      "number": "47",
+      "name": "OPPRESSION",
+      "gate": "22",
+      "center": "Ajna",
+      "channel": "64",
+      "circuit": "Individual/Knowing",
+      "definition":"You find it easy to make sense of what is confusing and your past experiences because of your ability to trust, not give in to pressure, and enjoy the possibilities until one of them stands out, all the loose pieces fit together and (aha), it all makes sense.",
+      "lines": [
+        "Futility",
+        "The saint",
+        "Repression",
+        "Self-oppression",
+        "Ambition",
+        "Taking stock"
+      ]
+    },
+    "011010":{
+      "position":["-2","42","0"],
+      "number": "48",
+      "name": "THE WELL",
+      "gate": "21",
+      "center": "Splenic",
+      "channel": "16",
+      "circuit": "Individual/Knowing",
+      "definition":"You have a natural ability to offer others logical and practical solutions based on your deep knowledge and intuition, in order to assess, correct and refine your environment and the capabilities of others.",
+      "lines": [
+        "Self-fulfillment",
+        "Action",
+        "Restructuring",
+        "Incommunicado",
+        "Degeneracy",
+        "Insignificance"
+      ]
+    },
+    "101110":{
+      "position":["1.50","38","0"],
+      "number": "49",
+      "name": "REVOLUTION",
+      "gate": "4",
+      "center": "Solar",
+      "channel": "19",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to sense what your community needs to maintain its emotional health and material well-being, to distribute resources fairly within it, and to start a revolution if the principles that make it all possible are not respected.",
+      "lines": [
+        "Attraction",
+        "Organization",
+        "Platform",
+        "Popular discontent",
+        "The last resort",
+        "The law of necessity"
+      ]
+    },
+    "011101":{
+      "position":["-1.25","39","0"],
+      "number": "50",
+      "name": "THE CAULDRON",
+      "gate": "3",
+      "center": "Splenic",
+      "channel": "27",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the gift to sense what is right or wrong in a given situation and to establish the norms, laws and values necessary to ensure the care, welfare and integrity of the community, challenging and changing those that are unjust or corrupt.",
+      "lines": [
+        "Leadership",
+        "Consistency",
+        "Corruption",
+        "Adaptability",
+        "Determination",
+        "The immigrant"
+      ]
+    },
+    "100100":{
+      "position":["0.75","36","0"],
+      "number": "51",
+      "name": "THE AROUSING",
+      "gate": "57",
+      "center": "Heart",
+      "channel": "25",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to compete, to withstand intense experiences and to impact and initiate others, infusing them with willpower, competitiveness and courage, to bring change, to take risks and to lead them beyond their comfort zones.",
+      "lines": [
+        "Separation",
+        "Symmetry",
+        "Limitation",
+        "Adaptation",
+        "Withdrawal",
+        "Reference"
+      ]
+    },
+    "001001":{
+      "position":["0.1","3","0"],
+      "number": "52",
+      "name": "KEEPING STILL",
+      "gate": "58",
+      "center": "Root",
+      "channel": "9",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel the pressure to find the one thing you can channel your concentration and your power for stillness on, so that you can focus on evaluating, taking the time to see the big picture of a situation, project, etc.",
+      "lines": [
+        "Peacefulness",
+        "Explanation",
+        "Self-discipline",
+        "Controls",
+        "Concern",
+        "Think before you speak"
+      ]
+    },
+    "001011":{
+      "position":["-0.1","3","0"],
+      "number": "53",
+      "name": "DEVELOPMENT",
+      "gate": "54",
+      "center": "Root",
+      "channel": "32",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel pressure to start and initiate new experiences, projects, ideas, etc., which makes you the ideal person to initiate the start of something new and then attract others to develop and complete it, so that you can share what you have learnt with others.",
+      "lines": [
+        "Phasing",
+        "Assertion",
+        "Assuredness",
+        "Practicality",
+        "Momentum",
+        "Accumulation"
+      ]
+    },
+    "110100":{
+      "position":["-0.1","2","0"],
+      "number": "54",
+      "name": "THE MARRYING MAIDEN",
+      "gate": "Creative Self-expression",
+      "center": "Self",
+      "channel": "Inspiration",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel an inner drive to rise, to ascend and improve your position professionally, personally and spiritually, and it is an ambition and momentum that spreads to those around you, bringing the possibility of prosperity to the whole community.",
+      "lines": [
+        "Selectivity",
+        "Magnanimity",
+        "Enlightenment/endarkenment",
+        "Covert interaction",
+        "Discretion",
+        "Influence"
+      ]
+    },
+    "101100":{
+      "position":["1","-1","0"],
+      "number": "55",
+      "name": "ABUNDANCE",
+      "gate": "59",
+      "center": "Solar",
+      "channel": "39",
+      "circuit": "Individual/Knowing",
+      "definition":"For you, it is normal on any given day to see the glass as half empty and half full, and as your mood determines what is right for you and when, it is vital that you accept and honour it, trusting that life will provide you with what you need, when you need it.",
+      "lines": [
+        "Selfishness",
+        "Growth",
+        "Assimilation",
+        "Innocence",
+        "Distrust",
+        "Cooperation"
+      ]
+    },
+    "001101":{
+      "position":["0.25","48","0"],
+      "number": "56",
+      "name": "THE WANDERER",
+      "gate": "60",
+      "center": "Throat",
+      "channel": "11",
+      "circuit": "Individual/Knowing",
+      "definition":"You have the ability to uniquely explain your own interpretation of experiences in the form of stories that inspire, entertain and provoke an emotional reaction in others in order to pass on lessons learned",
+      "lines": [
+        "Caution",
+        "Attracting attention",
+        "Expediency",
+        "Alienation",
+        "Linkage",
+        "Quality"
+      ]
+    },
+    "011011":{
+      "position":["-1.75","41","0"],
+      "number": "57",
+      "name": "THE GENTLE",
+      "gate": "51",
+      "center": "Splenic",
+      "channel": ["10","20","34"],
+      "circuit": "Individual/Knowing",
+      "definition":"With your intuition, you have the ability to scan your surroundings and penetrate everything around you to identify what is good, safe and healthy for you, moment by moment, and determine the perfect behaviour to ensure survival.",
+      "lines": [
+        "Utilization",
+        "Progression",
+        "The director",
+        "Acuteness",
+        "Cleansing",
+        "Confusion"
+      ]
+    },
+    "110110":{
+      "position":["-0.1","0","0"],
+      "number": "58",
+      "name": "THE JOYOUS",
+      "gate": "52",
+      "center": "Root",
+      "channel": "18",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel pressure to improve and correct anything that prevents society from achieving and maintaining well-being and health, hence your boldness, joy and enthusiasm to challenge the norm or whoever is behind it, always seeking to find a better way.",
+      "lines": [
+        "Carried away",
+        "Defense",
+        "Focusing",
+        "Electricity",
+        "Perversion",
+        "Love of life"
+      ]
+    },
+    "010011":{
+      "position":["0.1","10","0"],
+      "number": "59",
+      "name": "DISPERSION",
+      "gate": "55",
+      "center": "Sacral",
+      "channel": "6",
+      "circuit": "Individual/Knowing",
+      "Definition":"You have a gift for breaking down the barriers of intimacy, always looking for the right, honest and lasting relationships from which something viable, valuable and fulfilling can be born, whether it be a creative project, a baby.",
+      "lines": [
+        "The one night stand",
+        "The femme fatale or Casanova",
+        "Brotherhood/sisterhood",
+        "Openness",
+        "Shyness",
+        "The preemptive strike"
+      ]
+    },
+    "110010":{
+      "position":["0","3","0"],
+      "number": "60",
+      "name": "LIMITATION",
+      "gate": "56",
+      "center": "Root",
+      "channel": "3",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel pressure to transcend the limitations of the old ways of doing and bring something new and with potential into the world, yet it is only when you accept those limitations that the new breaks through them and you are able to bring change and transformation.",
+      "lines": [
+        "Rigidity",
+        "Leadership",
+        "Resourcefulness",
+        "Conservatism",
+        "Decisiveness",
+        "Acceptance"
+      ]
+    },
+    "110011":{
+      "position":["0","64","0"],
+      "number": "61",
+      "name": "INNER TRUTH",
+      "gate": "62",
+      "center": "Head",
+      "channel": "24",
+      "circuit": "Individual/Knowing",
+      "lines": [
+        "Appeal",
+        "Influence",
+        "Research",
+        "Interdependence",
+        "Natural brilliance",
+        "Occult knowledge"
+      ]
+    },
+    "001100":{
+      "position":["-0.25","48","0"],
+      "number": "62",
+      "name": "PREPONDERANCE OF THE SMALL",
+      "gate": "61",
+      "center": "Throat",
+      "channel": "47",
+      "circuit": "Individual/Knowing",
+      "lines": [
+        "Self-discipline",
+        "Metamorphosis",
+        "Asceticism",
+        "Discovery",
+        "Restraint",
+        "Routine"
+      ]
+    },
+    "101010":{
+      "position":["0.25","64","0"],
+      "number": "63",
+      "name": "AFTER COMPLETION",
+      "gate": "Creative Self-expression",
+      "center": "Self",
+      "channel": "Inspiration",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel pressure to always question the validity of things and their effectiveness until you have no doubts and can prove it in a practical way to provide new points of view from which others can assess their own circumstances.",
+      "lines": [
+        "Nostalgia",
+        "Affirmation",
+        "Memory",
+        "Continuance",
+        "Structuring",
+        "Composure"
+      ]
+    },
+    "010101":{
+      "position":["-0.25","64","0"],
+      "number": "64",
+      "name": "BEFORE COMPLETION",
+      "gate": "63",
+      "center": "Head",
+      "channel": "47",
+      "circuit": "Individual/Knowing",
+      "definition":"You feel the pressure to put in order the images, memories or messages from the past that come to you as inspiration to make sense of what has happened, so it is vital that you accept it, don't force your understanding and wait for the (aha) moment.",
+      "lines": [
+        "Victory",
+        "Promise",
+        "Conviction",
+        "Overextension",
+        "Qualification",
+        "Conditions"
+      ]
+    }
+  }
+  
