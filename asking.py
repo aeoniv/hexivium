@@ -33,15 +33,6 @@ class Asking:
         )
         return vectara
     
-    #def get_knowledge_content(self, query, threshold=0.5):
-    #    found_docs = self.vectara_client.similarity_search_with_score(
-    #        query,
-    #        score_threshold=threshold,
-    #    )
-    #    knowledge_content = ""
-    #    for number, (score, doc) in enumerate(found_docs):
-    #        knowledge_content += f"Document {number}: {found_docs[number][0].page_content}\n"
-    #    return knowledge_content
     
     def get_knowledge_content(self, query, threshold=0.5):
         found_docs = self.vectara_client.similarity_search_with_score(
@@ -116,7 +107,6 @@ class Asking:
     def create_interactive_prompt(self, knowledge_content, user_input):
         detailed_queries = st.session_state.get('detailed_queries', {})
 
-        #print("detailed_queries", detailed_queries)
 
         return f"""
            
@@ -135,28 +125,6 @@ class Asking:
             5. Combine the user question with the Hexagrams and Lines to provide a history telling.
             6. Offer guidance on how the user can contemplate on their question and the i-ching's wisdom.
         """
-
-        """        
-        Variables: {detailed_queries.get("Variables", "")}
-        Type: {detailed_queries.get("Type", "")}
-        Strategy: {detailed_queries.get("Strategy", "")}
-        Authority: {detailed_queries.get("Authority", "")}
-        Signature: {detailed_queries.get("Signature", "")}
-        NotSelfTheme: {detailed_queries.get("NotSelfTheme", "")}
-        Definition: {detailed_queries.get("Definition", "")}
-        Digestion: {detailed_queries.get("Digestion", "")}
-        Sense: {detailed_queries.get("Sense", "")}
-        Cognition: {detailed_queries.get("Cognition", "")}
-        Environment: {detailed_queries.get("Environment", "")}
-        profile: {detailed_queries.get("profile", "")}
-        IncarnationCross: {detailed_queries.get("IncarnationCross", "")}
-        Not-SelfTheme: {detailed_queries.get("Not-SelfTheme", "")}
-        Motivation: {detailed_queries.get("Motivation", "")}
-        Perspective: {detailed_queries.get("Perspective", "")}
-        Centers: {detailed_queries.get("Centers", "")}
-        Channels: {detailed_queries.get("Channels", "")}
-        Planets: {detailed_queries.get("Planets", "")}
-        Chemistry: {detailed_queries.get("Chemistry", "")}"""
 
 
     def display_ai_response(self, response):
