@@ -12,22 +12,12 @@ import time
 class IChingHexagram:
     def __init__(self, dataset):
         self.dataset = dataset
-        #self.middle_hexagram = self.generate_traditional_hexagram()
-        #self.left_hexagram, self.right_hexagram = self.derive_binary_hexagrams()
-        #self.changing_lines_info = {}
-        #self.dataset = dataset
-        #self.dataset = dataset
-        #self.session_state = session_state
-        #self.click_count = st.session_state.click_count if 'click_count' in st.session_state else 0
         self.click_count = st.session_state.get('click_count', 0)
         #self.middle_hexagram = st.session_state.middle_hexagram if 'middle_hexagram' in st.session_state else []
         self.middle_hexagram = st.session_state.get('middle_hexagram', [])
         self.left_hexagram = []
         self.right_hexagram = []
         self.changing_lines_info = {}
-        #self.user_question = ""
-        #self.user_question = st.session_state.get('user_question', "")
-        #self.user_question = st.session_state.user_question if 'user_question' in st.session_state else ""
         self.user_question = st.session_state.get('user_question', "")
         self.coins = []
         self.toss_results = []
@@ -72,8 +62,6 @@ class IChingHexagram:
 
         print("Left key:", left_key)  # Add this line to debug
 
-        #left_hexagram_data = self.dataset[left_key]
-        #right_hexagram_data = self.dataset[right_key]
 
         left_hexagram_data = self.dataset.get(left_key, {'lines': [''] * 6})
         right_hexagram_data = self.dataset.get(right_key, {'lines': [''] * 6})
@@ -199,30 +187,7 @@ class IChingHexagram:
             st.session_state.middle_hexagram = self.middle_hexagram
 
 
-        #else:
-        #    element_to_display = st.empty()
-        #    with st.spinner('Wait for it...'):                
-        #        st.info('Wait for the oracle to process the information', icon="ℹ️")
-                #st.info("New content loaded!")  # New content
-        #        st.warning("Old content fading out...")  # Old content fading out
-        #        element_to_display.info("New content")  # Display new content with fade-in effect
-        #        element_to_display.warning("Old content")  # Display old content with fade-out effect
-        #        self.render_hexagrams()
-        #        ask = Asking()            
-        #        changing_lines_info = self.changing_lines_info
-        #        question = self.hexagram_to_query(changing_lines_info) + "User Question" + self.user_question
-        #        response = ask.handle_user_query(self.user_question + "AND" + question)
-                #response = ask.handle_user_query("summarize")
-        #        st.write(response)
-        #        st.session_state['buttons_locked'] = True            
-        #        st.warning('Login to unlock the full oracle features', icon="⚠️")
-                #ask.handle_user_query(question)
-
-                #self.display_hexagrams()
-                #self.plot_merkaba()
-
-                #print(self.changing_lines_info)
-                #print(question)
+   
 
         else:
             element_to_display = st.empty()
@@ -234,17 +199,10 @@ class IChingHexagram:
                 st.session_state['buttons_locked'] = False
 
 
-                #if st.button("Do you want to know more about yourself?"):
-                #    st.components.v1.iframe(
-                #        "https://embed.bodygraphchart.com/v1/13934/iframe?token=0190b9df-2f0a-40aa-af2e-bd3ccde165f5",
-                #        width=800,
-                #        height=600
-                #    )
-                    
+ 
     def hexagram_to_query(self, changing_lines_info):
         query_parts = []
-        #for hexagram in ['left_hexagram']['left_hexagram']
-        #q = self.user_question
+ 
         
         name_left = changing_lines_info['left_hexagram']['name']
         number_left = changing_lines_info['left_hexagram']['number']
