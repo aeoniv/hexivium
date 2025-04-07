@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from dotenv import load_dotenv
 from iching_hexagram import IChingHexagram
+from asking import Asking
 
 
 load_dotenv()
@@ -34,8 +35,8 @@ def iching():
     
     # Initialize GraphManager with data
     #graph_manager = GraphManager(gates_data)
-    edge_index = graph_manager.get_edge_by_index(64)
-    print("edge_index", edge_index)
+    #edge_index = graph_manager.get_edge_by_index(64)
+    #print("edge_index", edge_index)
 
     #transition_manager = TransitionManager(graph_manager.graph)
     #transition_manager.deactivate_transitions(["Transition_111111-111110"])
