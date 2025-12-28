@@ -1,0 +1,45 @@
+{
+
+    "Sacral": {
+      "description": "Gut Response",
+      "traits": ["Intuitive", "Spontaneous", "Physical gut feeling"],
+      "focus": "Trusting the body's response to make decisions in the moment."
+    },
+    "Emotional": {
+      "description": "Emotional Clarity",
+      "traits": ["Sensitive", "Emotion-driven", "Patient"],
+      "focus": "Waiting for emotional clarity over time before making decisions."
+    },
+    "Splenic": {
+      "description": "Instant Intuition",
+      "traits": ["Instinctive", "In-the-moment awareness", "Survival-oriented"],
+      "focus": "Relying on instinct and spontaneous intuition for immediate decisions."
+    },
+    "Ego/Heart": {
+      "description": "Willpower",
+      "traits": ["Assertive", "Ego-driven", "Determined"],
+      "focus": "Making decisions based on what one truly wants and has the willpower to do."
+    },
+    "Self-Projected": {
+      "description": "Self-Expression",
+      "traits": ["Confident", "Expressive", "Self-aware"],
+      "focus": "Decisions emerge through self-expression and articulating one’s truth."
+    },
+    "Environmental": {
+      "description": "External Influence",
+      "traits": ["Adaptable", "Responsive", "Environmentally attuned"],
+      "focus": "Decisions influenced by interaction with and response to the environment."
+    },
+    "Mental/No Authority": {
+      "description": "Mental Processing",
+      "traits": ["Analytical", "Mentally focused", "Conceptual"],
+      "focus": "Decisions made through mental processing, often requiring external confirmation."
+    },
+    "Lunar": {
+      "description": "Lunar Cycle",
+      "traits": ["Cyclical", "Reflective", "Patient"],
+      "focus": "Decisions aligned with the lunar cycle, reflecting over a 28-day period."
+    }
+  
+}
+

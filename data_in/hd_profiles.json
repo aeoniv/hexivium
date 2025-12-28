@@ -1,0 +1,64 @@
+{
+
+    "1/3": {
+      "description": "Investigator/Martyr",
+      "traits": ["Deeply introspective", "Experimental", "Independent"],
+      "focus": "Personal discovery through research and trial-and-error."
+    },
+    "1/4": {
+      "description": "Investigator/Opportunist",
+      "traits": ["Inquisitive", "Opportunistic", "Network-oriented"],
+      "focus": "Gathering deep knowledge and using social connections to advance."
+    },
+    "2/4": {
+      "description": "Hermit/Opportunist",
+      "traits": ["Self-reliant", "Talented", "Socially aware"],
+      "focus": "Preferring solitude while valuing social networks for opportunities."
+    },
+    "2/5": {
+      "description": "Hermit/Heretic",
+      "traits": ["Intuitive", "Natural talent", "Projected image"],
+      "focus": "Internal wisdom and natural skills projected outward for societal impact."
+    },
+    "3/5": {
+      "description": "Martyr/Heretic",
+      "traits": ["Adaptable", "Resilient", "Influential"],
+      "focus": "Learning through experiences and trials, leading to influence others."
+    },
+    "3/6": {
+      "description": "Martyr/Role Model",
+      "traits": ["Experiential", "Evolving", "Wise"],
+      "focus": "Life of experimentation leading to a role model in later years."
+    },
+    "4/1": {
+      "description": "Opportunist/Investigator",
+      "traits": ["Network-savvy", "Foundation-seeking", "Practical"],
+      "focus": "Using relationships to explore and build a solid foundation of knowledge."
+    },
+    "4/6": {
+      "description": "Opportunist/Role Model",
+      "traits": ["Resourceful", "Objective", "Aspirational"],
+      "focus": "Forming meaningful relationships while transitioning to a role model."
+    },
+    "5/1": {
+      "description": "Heretic/Investigator",
+      "traits": ["Problem-solver", "In-depth researcher", "Projector of solutions"],
+      "focus": "Solving societal problems through deep research and projecting solutions."
+    },
+    "5/2": {
+      "description": "Heretic/Hermit",
+      "traits": ["Pragmatic", "Intuitive", "Guarded"],
+      "focus": "Addressing external challenges with an intuitive and pragmatic approach."
+    },
+    "6/2": {
+      "description": "Role Model/Hermit",
+      "traits": ["Evolutionary", "Self-sufficient", "Inspirational"],
+      "focus": "An evolutionary journey from self-reliance to becoming an inspirational figure."
+    },
+    "6/3": {
+      "description": "Role Model/Martyr",
+      "traits": ["Observant", "Persistent", "Transformative"],
+      "focus": "A life path of personal trial leading to wisdom and transformation."
+    }
+  
+}

@@ -1,0 +1,210 @@
+[
+    {
+      "variable": "LLLL",
+      "digestion": "Strategic",
+      "awareness_mind": "Focused",
+      "perspective_motivation": "Specific",
+      "environment": "Active",
+      "use_case": "Meal Planning for Energy: Create a structured meal prep schedule (e.g., fixed times for breakfast, lunch, dinner) to maintain steady energy for demanding jobs like teaching or nursing. Use apps like MyFitnessPal to track consistency, reducing digestive issues or fatigue.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "daily"
+      }
+    },
+    {
+      "variable": "LLLR",
+      "digestion": "Strategic",
+      "awareness_mind": "Focused",
+      "perspective_motivation": "Specific",
+      "environment": "Passive",
+      "use_case": "Logical Decision-Making: Make career choices (e.g., job switches) using pros-and-cons lists in organized settings, ensuring logical alignment for professionals like lawyers or analysts.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "situational"
+      }
+    },
+    {
+      "variable": "LLRL",
+      "digestion": "Strategic",
+      "awareness_mind": "Focused",
+      "perspective_motivation": "Broad",
+      "environment": "Active",
+      "use_case": "Proactive Problem-Solving: In fast-paced roles like tech support, use checklists in structured settings to solve issues quickly while staying aware of client needs, boosting customer satisfaction.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "daily"
+      }
+    },
+    {
+      "variable": "LLRR",
+      "digestion": "Strategic",
+      "awareness_mind": "Focused",
+      "perspective_motivation": "Broad",
+      "environment": "Passive",
+      "use_case": "Organized Study Routines: Students or analysts can use detailed planners (e.g., Notion) to break down tasks into steps, improving focus and grades or work output in data-driven roles like accounting.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "daily"
+      }
+    },
+    {
+      "variable": "LRLL",
+      "digestion": "Strategic",
+      "awareness_mind": "Receptive",
+      "perspective_motivation": "Specific",
+      "environment": "Active",
+      "use_case": "Structured Emotional Processing: In therapy or leadership, use structured tools like CBT worksheets to process emotions logically, reducing stress in high-pressure roles like HR.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "weekly"
+      }
+    },
+    {
+      "variable": "LRLR",
+      "digestion": "Strategic",
+      "awareness_mind": "Receptive",
+      "perspective_motivation": "Specific",
+      "environment": "Passive",
+      "use_case": "Reflective Therapy: Use reflective practices like meditation or therapy in quiet spaces to process absorbed energies, aiding counselors or caregivers in managing emotional load from clients.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "weekly"
+      }
+    },
+    {
+      "variable": "LRRL",
+      "digestion": "Strategic",
+      "awareness_mind": "Receptive",
+      "perspective_motivation": "Broad",
+      "environment": "Active",
+      "use_case": "Empathetic Communication: In sales or teaching, use empathetic language in flexible settings (e.g., client meetings in varied locations) to build trust and improve outcomes.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "situational"
+      }
+    },
+    {
+      "variable": "LRRR",
+      "digestion": "Strategic",
+      "awareness_mind": "Receptive",
+      "perspective_motivation": "Broad",
+      "environment": "Passive",
+      "use_case": "Intuitive Journaling: Journal nightly to process emotions intuitively, helping therapists or creatives avoid burnout by aligning with natural emotional flow. Use prompts like 'What felt right today?'",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "daily"
+      }
+    },
+    {
+      "variable": "RLLL",
+      "digestion": "Receptive",
+      "awareness_mind": "Focused",
+      "perspective_motivation": "Specific",
+      "environment": "Active",
+      "use_case": "Analytical Research: Researchers or writers can compile data in structured formats (e.g., spreadsheets) in quiet, controlled settings to improve clarity in academic or professional reports.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "project-based"
+      }
+    },
+    {
+      "variable": "RLLR",
+      "digestion": "Receptive",
+      "awareness_mind": "Focused",
+      "perspective_motivation": "Specific",
+      "environment": "Passive",
+      "use_case": "Methodical Goal Setting: Use SMART goals in structured environments (e.g., home office with minimal distractions) to advance in methodical careers like engineering or project management.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "weekly"
+      }
+    },
+    {
+      "variable": "RLRL",
+      "digestion": "Receptive",
+      "awareness_mind": "Focused",
+      "perspective_motivation": "Broad",
+      "environment": "Active",
+      "use_case": "Balanced Team Dynamics: In team projects, stay engaged but observant in open-plan offices, improving collaboration for managers by noticing team cues and adjusting leadership style dynamically.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "daily"
+      }
+    },
+    {
+      "variable": "RLRR",
+      "digestion": "Receptive",
+      "awareness_mind": "Focused",
+      "perspective_motivation": "Broad",
+      "environment": "Passive",
+      "use_case": "Creative Emotional Outlets: Artists or writers can use slow journaling or art in open spaces to process emotions, creating authentic work that resonates with audiences.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "daily"
+      }
+    },
+    {
+      "variable": "RRLL",
+      "digestion": "Receptive",
+      "awareness_mind": "Receptive",
+      "perspective_motivation": "Specific",
+      "environment": "Active",
+      "use_case": "Stable Routines in Dynamic Settings: Maintain consistent habits (e.g., morning yoga) in varied settings like travel or busy offices to stay grounded, ideal for consultants or digital nomads.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "daily"
+      }
+    },
+    {
+      "variable": "RRLR",
+      "digestion": "Receptive",
+      "awareness_mind": "Receptive",
+      "perspective_motivation": "Specific",
+      "environment": "Passive",
+      "use_case": "Mindful Social Settings: Choose calm social settings (e.g., small cafes over loud bars) to avoid overstimulation, helping empaths or introverts maintain emotional balance in friendships or networking.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "situational"
+      }
+    },
+    {
+      "variable": "RRRL",
+      "digestion": "Receptive",
+      "awareness_mind": "Receptive",
+      "perspective_motivation": "Broad",
+      "environment": "Active",
+      "use_case": "Immersive Learning: Learn skills like coding or art through hands-on workshops or YouTube tutorials in open environments (e.g., parks), enhancing retention for students or hobbyists.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "weekly"
+      }
+    },
+    {
+      "variable": "RRRR",
+      "digestion": "Receptive",
+      "awareness_mind": "Receptive",
+      "perspective_motivation": "Broad",
+      "environment": "Passive",
+      "use_case": "Flexible Workspaces: Work in dynamic settings like co-working spaces or cafes to boost creativity. For freelancers, rotate between home and public spaces weekly to enhance productivity and reduce mental fog.",
+      "metrics": {
+        "effectiveness_score": 0,
+        "priority_weight": 1.0,
+        "application_frequency": "weekly"
+      }
+    }
+  ]

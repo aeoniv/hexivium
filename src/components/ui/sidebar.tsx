@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
-import { Sheet, SheetContent } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { Skeleton } from "@/components/ui/skeleton"
 import {
   Tooltip,
@@ -194,7 +194,7 @@ const Sidebar = React.forwardRef<
 
     if (isMobile) {
       return (
-        <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
+        <Sheet open={openMobile} onOpenChange={setOpenMobile}>
           <SheetContent
             data-sidebar="sidebar"
             data-mobile="true"
@@ -205,7 +205,11 @@ const Sidebar = React.forwardRef<
               } as React.CSSProperties
             }
             side={side}
+            {...props}
           >
+            <SheetHeader className="p-2">
+                <SheetTitle className="sr-only">Sidebar</SheetTitle>
+            </SheetHeader>
             <div className="flex h-full w-full flex-col">{children}</div>
           </SheetContent>
         </Sheet>
@@ -397,10 +401,11 @@ SidebarSeparator.displayName = "SidebarSeparator"
 
 const SidebarContent = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div">
->(({ className, ...props }, ref) => {
+  React.ComponentProps<"div"> & { asChild?: boolean }
+>(({ className, asChild = false, ...props }, ref) => {
+  const Comp = asChild ? Slot : "div"
   return (
-    <div
+    <Comp
       ref={ref}
       data-sidebar="content"
       className={cn(

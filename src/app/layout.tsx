@@ -1,11 +1,26 @@
-import type { Metadata } from 'next';
-import { Toaster } from '@/components/ui/toaster';
+
+import type {Metadata} from 'next';
+import { Rajdhani } from 'next/font/google'
 import './globals.css';
-import { cn } from '@/lib/utils';
+import { Toaster } from "@/components/ui/toaster"
+import { GlobalLayout } from '@/components/global-layout';
+import { CalendarProvider } from '@/contexts/calendar-context';
+import { GlobalStateProvider } from '@/contexts/global-state-context';
+import { FirebaseClientProvider } from '@/firebase/client-provider';
+import { ThemeProvider } from '@/contexts/theme-provider';
+import { AgentProvider } from '@/contexts/agent-context';
+import ChunkErrorReloader from '@/components/chunk-error-reloader';
+
+const rajdhani = Rajdhani({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-rajdhani',
+});
+
 
 export const metadata: Metadata = {
   title: 'Hexivium',
-  description: 'An AI-powered code browser and search tool.',
+  description: 'A calendar system based on I Ching hexagrams and Neidan alchemy.',
 };
 
 export default function RootLayout({
@@ -14,25 +29,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={cn('font-body antialiased', 'min-h-screen bg-background font-sans')}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body className="font-body antialiased">
+        <ThemeProvider>
+          <FirebaseClientProvider>
+            <AgentProvider>
+              <GlobalStateProvider>
+                <CalendarProvider>
+                  <GlobalLayout>
+                    {/* Auto-reload on transient chunk load failures (dev/reload safety) */}
+                    <ChunkErrorReloader />
+                    {children}
+                  </GlobalLayout>
+                </CalendarProvider>
+              </GlobalStateProvider>
+            </AgentProvider>
+          </FirebaseClientProvider>
+        </ThemeProvider>
         <Toaster />
       </body>
     </html>

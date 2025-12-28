@@ -1,0 +1,106 @@
+{
+  "schema": {
+    "description": "Defines the hierarchical structure of Human Design substructures.",
+    "hierarchy": [
+      "line",
+      "color",
+      "tone",
+      "base"
+    ],
+    "rules": {
+      "line": {
+        "id": "line",
+        "count": 6,
+        "contains": "color"
+      },
+      "color": {
+        "id": "color",
+        "count": 6,
+        "contains": "tone"
+      },
+      "tone": {
+        "id": "tone",
+        "count": 6,
+        "contains": "base"
+      },
+      "base": {
+        "id": "base",
+        "count": 5,
+        "contains": null
+      }
+    }
+  },
+  "definitions": {
+    "lines": [
+      null,
+      { "id": 1, "name": "Investigator" },
+      { "id": 2, "name": "Hermit" },
+      { "id": 3, "name": "Martyr" },
+      { "id": 4, "name": "Opportunist" },
+      { "id": 5, "name": "Heretic" },
+      { "id": 6, "name": "Role Model" }
+    ],
+    "colors": [
+      null,
+      {
+        "id": 1, "theme": "Fear",
+        "determination": { "name": "Appetite", "left": "Consecutive", "right": "Alternating" },
+        "environment": { "name": "Caves", "left": "Selective", "right": "Blending" },
+        "motivation": { "name": "Fear", "transference": "Need" },
+        "view": { "name": "Survival", "transference": "Wanting" }
+      },
+      {
+        "id": 2, "theme": "Hope",
+        "determination": { "name": "Taste", "left": "Open", "right": "Closed" },
+        "environment": { "name": "Markets", "left": "Internal", "right": "External" },
+        "motivation": { "name": "Hope", "transference": "Guilt" },
+        "view": { "name": "Possibility", "transference": "Probability" }
+      },
+      {
+        "id": 3, "theme": "Desire",
+        "determination": { "name": "Thirst", "left": "Hot", "right": "Cold" },
+        "environment": { "name": "Kitchens", "left": "Wet", "right": "Dry" },
+        "motivation": { "name": "Desire", "transference": "Innocence" },
+        "view": { "name": "Power", "transference": "Personal" }
+      },
+      {
+        "id": 4, "theme": "Need",
+        "determination": { "name": "Touch", "left": "Calm", "right": "Nervous" },
+        "environment": { "name": "Mountains", "left": "Active", "right": "Passive" },
+        "motivation": { "name": "Need", "transference": "Fear" },
+        "view": { "name": "Wanting", "transference": "Survival" }
+      },
+      {
+        "id": 5, "theme": "Guilt",
+        "determination": { "name": "Sound", "left": "High", "right": "Low" },
+        "environment": { "name": "Valleys", "left": "Narrow", "right": "Wide" },
+        "motivation": { "name": "Guilt", "transference": "Hope" },
+        "view": { "name": "Probability", "transference": "Possibility" }
+      },
+      {
+        "id": 6, "theme": "Innocence",
+        "determination": { "name": "Light", "left": "Direct", "right": "Indirect" },
+        "environment": { "name": "Shores", "left": "Natural", "right": "Artificial" },
+        "motivation": { "name": "Innocence", "transference": "Desire" },
+        "view": { "name": "Personal", "transference": "Power" }
+      }
+    ],
+    "tones": [
+      null,
+      { "id": 1, "name": "Smell", "orientation": "Strategic" },
+      { "id": 2, "name": "Taste", "orientation": "Strategic" },
+      { "id": 3, "name": "Outer Vision", "orientation": "Strategic" },
+      { "id": 4, "name": "Inner Vision", "orientation": "Receptive" },
+      { "id": 5, "name": "Feeling", "orientation": "Receptive" },
+      { "id": 6, "name": "Touch", "orientation": "Receptive" }
+    ],
+    "bases": [
+      null,
+      { "id": 1, "name": "Metal" },
+      { "id": 2, "name": "Water" },
+      { "id": 3, "name": "Fire" },
+      { "id": 4, "name": "Earth" },
+      { "id": 5, "name": "Wood" }
+    ]
+  }
+}

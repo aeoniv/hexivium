@@ -1,0 +1,28 @@
+{
+
+    "Manifestor": {
+      "description": "Initiators and impact makers, known for their ability to start projects and make things happen.",
+      "strategy": "Informing others before taking action to avoid resistance.",
+      "notable_features": ["Initiative", "Impact", "Independence"],
+      "challenges": ["Impulsiveness", "Resistance from others if not informing"]
+    },
+    "Generator": {
+      "description": "The builders and doers, characterized by their sustainable life force energy.",
+      "strategy": "Responding to situations and opportunities, rather than initiating.",
+      "notable_features": ["Stamina", "Sustainability", "Responsiveness"],
+      "challenges": ["Frustration from not waiting to respond", "Burnout if not aligned with true work"]
+    },
+    "Projector": {
+      "description": "Guides and directors, skilled in understanding others and managing energies.",
+      "strategy": "Waiting for recognition and invitation to maximize their impact.",
+      "notable_features": ["Guidance", "Efficiency", "Insightfulness"],
+      "challenges": ["Bitterness from not being recognized", "Exhaustion from overdoing"]
+    },
+    "Reflector": {
+      "description": "Reflectors are rare and unique, mirroring the health and wellbeing of their environment.",
+      "strategy": "Waiting a full lunar cycle before making major decisions.",
+      "notable_features": ["Reflectiveness", "Sensitivity", "Adaptability"],
+      "challenges": ["Feeling overwhelmed by others' energies", "Impatience in decision-making"]
+    }
+  
+}
