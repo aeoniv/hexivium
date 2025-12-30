@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['PT Sans', 'sans-serif'],
-        headline: ['Playfair Display', 'serif'],
+        body: ['var(--font-rajdhani)', 'sans-serif'],
+        headline: ['var(--font-rajdhani)', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {

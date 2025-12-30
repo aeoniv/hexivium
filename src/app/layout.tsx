@@ -1,6 +1,6 @@
 
 import type {Metadata} from 'next';
-import { Playfair_Display, PT_Sans } from 'next/font/google';
+import { Rajdhani } from 'next/font/google'
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import { GlobalLayout } from '@/components/global-layout';
@@ -13,16 +13,10 @@ import ChunkErrorReloader from '@/components/chunk-error-reloader';
 import { LanguageProvider } from '@/context/language-context';
 import { Analytics } from '@vercel/analytics/react';
 
-const playfair = Playfair_Display({
+const rajdhani = Rajdhani({
   subsets: ['latin'],
-  weight: ['700'],
-  variable: '--font-playfair-display',
-});
-
-const ptSans = PT_Sans({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-pt-sans',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-rajdhani',
 });
 
 const siteTitle = 'Jornada Shaolin de Verão | Acampamento de Kung Fu';
@@ -83,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={`${playfair.variable} ${ptSans.variable} font-body antialiased`}>
+      <body className={`${rajdhani.variable} font-body antialiased`}>
         <ThemeProvider>
           <FirebaseClientProvider>
              <LanguageProvider>
