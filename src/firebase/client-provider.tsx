@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { createContext, useContext, ReactNode, useMemo, useEffect, useState } from 'react';
@@ -8,6 +7,7 @@ import { FirebaseStorage, getStorage } from 'firebase/storage';
 import { getOrInitializeApp } from '@/lib/firebase';
 import type { FirebaseApp } from 'firebase/app';
 import { Loader2 } from 'lucide-react';
+import { FirebaseErrorListener } from '@/components/FirebaseErrorListener';
 
 interface FirebaseContextType {
   app: FirebaseApp;
@@ -65,6 +65,7 @@ function FirebaseProvider({ children }: { children: ReactNode }) {
   
   return (
     <FirebaseContext.Provider value={services}>
+      <FirebaseErrorListener />
       {children}
     </FirebaseContext.Provider>
   );
