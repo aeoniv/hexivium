@@ -2,8 +2,8 @@
 
 import { useTranslation } from '@/context/language-context';
 import { Button } from '@/components/ui/button';
-import BrazilFlagIcon from '@/components/icons/brazil-flag-icon';
-import UsaFlagIcon from '@/components/icons/usa-flag-icon';
+import BrazilFlagIcon from './icons/brazil-flag-icon';
+import UsaFlagIcon from './icons/usa-flag-icon';
 
 export default function LanguageSelector() {
   const { language, setLanguage } = useTranslation();
