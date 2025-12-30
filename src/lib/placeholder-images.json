@@ -1,0 +1,172 @@
+{
+  "placeholderImages": [
+    {
+      "id": "new-hero-background",
+      "description": "Monge Shaolin meditando em uma montanha com o nascer do sol ao fundo.",
+      "imageUrl": "https://storage.googleapis.com/studio-hosting-assets/misc-assets/acampamento-shaolin/new-hero-background.jpg",
+      "imageHint": "shaolin meditation",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "kung-fu-activity",
+      "description": "A person practicing a dynamic Kung Fu pose outdoors.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/seayvgx0ly0zbd44e8ytd/20240422_114937.jpg?rlkey=sl2g74bmcg2e7n71jlphvujgx&raw=1",
+      "imageHint": "kung fu",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "medicine-activity",
+      "description": "A collection of traditional Chinese medicine herbs and tools.",
+      "imageUrl": "https://images.unsplash.com/photo-1598555763574-dca77e10427e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGluZXNlJTIwbWVkaWNpbmV8ZW58MHx8fHwxNzY1MjE5MDcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chinese medicine",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "iching-activity",
+      "description": "I-Ching coins and yarrow stalks for divination.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/mjxznmlt1jr1yx8wwmeqx/20240331_162910.jpg?rlkey=6hj32lp4hh56o4uklmth9v24x&raw=1",
+      "imageHint": "i-ching",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "mentor-profile",
+      "description": "Profile picture of the mentor, Vinicius.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/h6t8wmaibmpqbs5f6nc3y/IMG-20251204-WA0008.jpg?rlkey=0xo41dkoqo8mlppnmgkp45l70&raw=1",
+      "imageHint": "man portrait",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "id": "map-location",
+      "description": "Uma academia ao ar livre na praia de João Pessoa.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/ixvnr3ksjormgm9u4fb9i/academia-ao-ar-livre-jp-3.jpeg?rlkey=xa0oi5iuch63ler2o9iove9gv&raw=1",
+      "imageHint": "outdoor gym",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "martial-artists-phase",
+      "description": "Group of adults practicing martial arts.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/8l0sevlo9bbnoz2ukeil8/globetrotteuseentong_20240721_p_3416888982320124492_3_3415307018215534000.jpg?rlkey=uugc29zjirlihoeho2yzcetoi&raw=1",
+      "imageHint": "martial arts",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "kids-phase",
+      "description": "Group of children happily learning Kung Fu.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/4py7c031i8cpwjh9ce9co/20240203_172059.jpg?rlkey=wb2qjzgj6lr2jxr30b8tnzvml&raw=1",
+      "imageHint": "children playing",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "seniors-phase",
+      "description": "Group of seniors practicing Tai Chi outdoors.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/65g0rk4q713gsplcag91g/EDQE1518.jpg?rlkey=c4ea7l4t85agw2c7a7f0r3up4&raw=1",
+      "imageHint": "seniors tai chi",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "hostel-1",
+      "description": "Exterior view of the hostel.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/3xyn6iw5d0fu19z1ah6lz/590778945.jpg?rlkey=nhkyuixcc6w3otpm95hw5tjx4&raw=1",
+      "imageHint": "hostel exterior",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "hostel-2",
+      "description": "Common area of the hostel.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/hs2u4w4zofu69t4ads6dn/images-16.jpeg?rlkey=kt05et08ee0tjhyvn5i8827he&raw=1",
+      "imageHint": "hostel common area",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "hostel-3",
+      "description": "Another view of the hostel space.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/n7prdxdh6gzq21t9uteme/770412533.jpg?rlkey=3g7k90yvawq6mivtda97s2ois&raw=1",
+      "imageHint": "hostel interior",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "form-shaolin",
+      "description": "Shaolin form Wu Bu Quan.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/v99ij31fovgwpkj1cuaf7/IMG_20240723_215729_459.webp?rlkey=ssfx5yu19b7np4ry32tp5sml8&raw=1",
+      "imageHint": "shaolin kungfu",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "form-meihua",
+      "description": "Meihua Quan form Wu Shi.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/0ne4e8wwrwmcneaqhwofk/IMG_20240729_102326_413.webp?rlkey=0qkdzb1sv9s22ew2udyo26u0h&raw=1",
+      "imageHint": "meihua quan",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "form-mantis",
+      "description": "Louva-a-Deus form Saam Bo Jin.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/44242ir0e2w9n4rfiqafb/IMG-20251212-WA0004.jpg?rlkey=3mycyj7sgvgw30inm95kdy07p&raw=1",
+      "imageHint": "mantis kungfu",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "form-wingchun",
+      "description": "Wing Chun form Siu Nim Tao.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/nlnym0sk4qunmbotrkq6g/IMG-20251212-WA0005.jpg?rlkey=17b4aofy352in5ybpx9sed4tl&raw=1",
+      "imageHint": "wing chun",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "form-taiji",
+      "description": "Taiji Quan 8 Passos form.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/uu7jebtgoobvaqaogsr4d/IMG-20251212-WA0006.jpg?rlkey=3r29hiw27kcu8f4bls94y46c4&raw=1",
+      "imageHint": "taiji quan",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "form-bagua",
+      "description": "Bagua Zhang 8 Palmas Mãe form.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/adz40wkfldr8byep698j0/IMG-20251212-WA0007.jpg?rlkey=rvqy456yuhgwrfvdxktp9ibhp&raw=1",
+      "imageHint": "bagua zhang",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "practice-china",
+      "description": "Mentor practicing in China.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/nb8kti6wugo49jmc23d8c/IMG-20251212-WA0001.jpg?rlkey=5v59qs1pkcnxnhku1mzm49m9w&raw=1",
+      "imageHint": "china temple",
+      "width": 400,
+      "height": 400
+    },
+    {
+      "id": "practice-thailand",
+      "description": "Mentor practicing in Thailand.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/bdk94nx6kuwc09hl9yrqk/IMG-20251212-WA0002.jpg?rlkey=tw6yrd3ohsv63os63atlmq9up&raw=1",
+      "imageHint": "thailand temple",
+      "width": 400,
+      "height": 400
+    },
+    {
+      "id": "practice-japan",
+      "description": "Mentor practicing in Japan.",
+      "imageUrl": "https://www.dropbox.com/scl/fi/qbflryi6mxykc4j0q8rrb/IMG-20251212-WA0003.jpg?rlkey=wftis8bhox7i0m6ne4cankr5t&raw=1",
+      "imageHint": "japan temple",
+      "width": 400,
+      "height": 400
+    }
+  ]
+}

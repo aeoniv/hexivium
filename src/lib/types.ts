@@ -82,4 +82,22 @@ export interface ZodiacInfo {
     channel: 'Taiyin' | 'Yangming' | 'Shaoyin' | 'Taiyang' | 'Jueyin' | 'Shaoyang';
 }
 
+export type UserProfile = {
+  id: string;
+  displayName: string;
+  email: string;
+  energyBalance: number;
+};
+
+export type Booking = {
+  id: string;
+  classId: string;
+  className: string;
+  bookedAt: {
+    seconds: number;
+    nanoseconds: number;
+  };
+  userId: string;
+  displayName: string;
+};
     

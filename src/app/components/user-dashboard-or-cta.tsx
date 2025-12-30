@@ -1,0 +1,39 @@
+
+'use client';
+
+import { useUser } from '@/firebase';
+import AiScheduleGenerator from './ai-schedule-generator';
+import EnergyDashboardSection from './energy-dashboard-section';
+import ClassScheduleSection from './class-schedule-section';
+import EnergyMarketplaceSection from './energy-marketplace-section';
+import { Skeleton } from '@/components/ui/skeleton';
+
+function DashboardLoading() {
+    return (
+      <div className="container mx-auto px-4 md:px-6 space-y-8 py-12 md:py-24">
+        <Skeleton className="h-48 w-full" />
+        <Skeleton className="h-96 w-full" />
+        <Skeleton className="h-96 w-full" />
+      </div>
+    );
+  }
+
+export default function UserDashboardOrCTA() {
+  const { user, isUserLoading } = useUser();
+
+  if (isUserLoading) {
+    return <DashboardLoading />;
+  }
+
+  if (user) {
+    return (
+      <>
+        <EnergyDashboardSection />
+        <ClassScheduleSection />
+        <EnergyMarketplaceSection />
+      </>
+    );
+  }
+
+  return <AiScheduleGenerator />;
+}
