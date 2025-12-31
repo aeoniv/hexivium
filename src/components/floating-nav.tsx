@@ -21,8 +21,12 @@ import { SavedProfiles } from './saved-profiles';
 import { UserNav } from './user-nav';
 import { BaguaInfo } from './bagua-info';
 import { BackgroundViewToggle } from './background-view-toggle';
+import { QiCharger } from './qi-charger';
 import { Label } from './ui/label';
+import { Tooltip, TooltipProvider, TooltipTrigger, TooltipContent } from './ui/tooltip';
 import { ThemeToggle } from './theme-toggle';
+import { AccelerometerVisualizer } from './accelerometer-visualizer';
+import { CameraProgressButton } from './camera-progress-button';
 import type { Mode, AutoSequenceName, HighlightMode } from '@/lib/types';
 import type { User } from 'firebase/auth';
 
@@ -40,7 +44,11 @@ interface FloatingNavProps {
   sunActiveLine: number | null;
   highlightMode: HighlightMode;
   setHighlightMode: (mode: HighlightMode) => void;
+  onCameraClick: () => void;
+  isCapturing: boolean;
+  captureProgress: number;
 }
+
 
 export function FloatingNav({
   user,
@@ -54,6 +62,9 @@ export function FloatingNav({
   sunActiveLine,
   highlightMode,
   setHighlightMode,
+  onCameraClick,
+  isCapturing,
+  captureProgress,
 }: FloatingNavProps) {
   const { t } = useTranslation();
   const isAdmin = user?.email === ADMIN_EMAIL;
@@ -146,12 +157,29 @@ export function FloatingNav({
   return (
       <div className="fixed top-4 right-4 z-40">
         <div className="flex items-center gap-2 rounded-full bg-card/80 backdrop-blur-sm border p-1">
-          <Button asChild variant="ghost" size="icon" className="h-12 w-12 rounded-full">
-            <Link href="/dashboard">
-              <DragonflyMantisIcon className="h-7 w-7 text-primary" />
-            </Link>
-          </Button>
+          <TooltipProvider>
+              <Tooltip>
+                  <TooltipTrigger asChild>
+                      <Button asChild variant="ghost" size="icon" className="h-12 w-12 rounded-full">
+                          <Link href="/dashboard">
+                          <DragonflyMantisIcon className="h-7 w-7 text-primary" />
+                          </Link>
+                      </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                      <p>Dashboard</p>
+                  </TooltipContent>
+              </Tooltip>
+          </TooltipProvider>
 
+          <QiCharger />
+          <AccelerometerVisualizer />
+          <CameraProgressButton 
+            onClick={onCameraClick}
+            isCapturing={isCapturing}
+            progress={captureProgress}
+          />
+          
           <Sheet>
               <SheetTrigger asChild>
                   <Button variant="ghost" size="icon" className="h-12 w-12 rounded-full">
@@ -193,3 +221,4 @@ export function FloatingNav({
       </div>
   );
 }
+
