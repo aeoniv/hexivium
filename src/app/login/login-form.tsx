@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useForm, type SubmitHandler } from 'react-hook-form';
@@ -13,7 +12,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
-import { useAuth, initiateEmailSignIn } from '@/firebase';
+import { useAuth, initiateEmailSignIn, useUser } from '@/firebase';
 import { type User } from 'firebase/auth';
 import { Loader2 } from 'lucide-react';
 import { useTranslation } from '@/context/language-context';
@@ -32,6 +31,7 @@ export default function LoginForm() {
   const searchParams = useSearchParams();
   const { toast } = useToast();
   const auth = useAuth();
+  const { user, isUserLoading } = useUser();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -40,6 +40,13 @@ export default function LoginForm() {
       password: '',
     },
   });
+  
+  useEffect(() => {
+    if (!isUserLoading && user) {
+        const redirectUrl = searchParams.get('redirect') || '/profile';
+        router.push(redirectUrl);
+    }
+  }, [user, isUserLoading, router, searchParams]);
 
   const handleSuccess = useCallback((user: User) => {
     toast({
@@ -64,17 +71,9 @@ export default function LoginForm() {
   }, [toast, t]);
 
   const onSubmit: SubmitHandler<FormValues> = data => {
-    if (!auth) return;
     setIsSubmitting(true);
     initiateEmailSignIn(auth, data.email, data.password, handleSuccess, handleError);
   };
-
-  useEffect(() => {
-    if (auth?.currentUser) {
-        const redirectUrl = searchParams.get('redirect') || '/profile';
-        router.push(redirectUrl);
-    }
-  }, [auth, router, searchParams]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-secondary p-4">
