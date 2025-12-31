@@ -6,7 +6,8 @@ import { useRouter } from 'next/navigation';
 import { useUser } from '@/firebase';
 import Footer from '@/app/components/footer';
 import { Skeleton } from '@/components/ui/skeleton';
-import AdminDashboard from './admin-dashboard';
+import AdminDashboard from '@/app/admin/admin-dashboard';
+import FloatingNav from '../components/floating-nav';
 
 const ADMIN_EMAIL = 'shi.heng.yong.yi@gmail.com';
 
@@ -33,6 +34,7 @@ export default function AdminPage() {
     if (isUserLoading || !user || user.email !== ADMIN_EMAIL) {
         return (
           <div className="flex min-h-screen flex-col bg-background">
+            <FloatingNav />
             <main className="flex-1">
               <AdminLoading />
             </main>
@@ -43,6 +45,7 @@ export default function AdminPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
+      <FloatingNav />
       <main className="flex-1 pt-24">
         <AdminDashboard />
       </main>
