@@ -19,8 +19,7 @@ import { trigrams } from '@/lib/i-ching-data';
 import type { Trigram } from '@/lib/types';
 import { structures, type StructureData } from '@/lib/structures';
 import { cubeDirections, cubeToPixel, Cube, cubeAdd } from "@/lib/grid-utils";
-import { useAuth, useFirestore } from '@/firebase/client-provider';
-import { useUser } from '@/lib/auth';
+import { useAuth, useFirestore, useUser } from '@/firebase';
 import { useOnClickOutside } from "@/hooks/use-on-click-outside";
 
 type Reading = ReturnType<typeof generateReading>;
@@ -82,7 +81,7 @@ export function FloatingAgent() {
   const router = useRouter();
   const auth = useAuth();
   const db = useFirestore();
-  const user = useUser(auth);
+  const { user } = useUser();
 
   useOnClickOutside(readingDialogRef, () => {
     if (reading) {

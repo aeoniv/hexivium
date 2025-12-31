@@ -6,8 +6,7 @@ import { FloatingNav } from '@/components/floating-nav';
 import { useGlobal } from '@/contexts/global-state-context';
 import { FloatingAgent } from './floating-agent';
 import { GlobalCameraModal } from './global-camera-modal';
-import { useUser } from '@/lib/auth';
-import { useAuth, useStorage, useFirestore } from '@/firebase';
+import { useUser, useAuth, useStorage, useFirestore } from '@/firebase';
 import { useToast } from '@/hooks/use-toast';
 import { ref, uploadString } from "firebase/storage";
 import { doc, updateDoc } from 'firebase/firestore';
@@ -33,7 +32,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
   const auth = useAuth();
   const db = useFirestore();
   const storage = useStorage();
-  const user = useUser(auth);
+  const { user } = useUser();
 
   useEffect(() => {
     setHasMounted(true);

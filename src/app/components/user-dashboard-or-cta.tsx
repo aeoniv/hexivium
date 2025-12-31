@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useUser } from '@/firebase';
+import { useUser, useAuth } from '@/firebase';
 import AiScheduleGenerator from './ai-schedule-generator';
 import EnergyDashboardSection from './energy-dashboard-section';
 import ClassScheduleSection from './class-schedule-section';

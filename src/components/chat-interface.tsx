@@ -57,6 +57,7 @@ export default function ChatInterface() {
     const { toast } = useToast();
     const scrollAreaRef = useRef<HTMLDivElement>(null);
     const isInitialMount = useRef(true);
+    const { t } = useTranslation();
     
     const handleServerAction = async (prompt: string, currentHistory: HistoryMessage[]) => {
         setIsChatLoading(true);

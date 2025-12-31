@@ -4,7 +4,7 @@
 import { useEffect } from 'react';
 import Script from 'next/script';
 import { useRouter } from 'next/navigation';
-import { useUser, useAuth } from '@/firebase';
+import { useUser } from '@/firebase';
 import { Skeleton } from '@/components/ui/skeleton';
 import ChatInterface from '@/components/chat-interface';
 import { FloatingNav } from '@/components/floating-nav';
@@ -35,8 +35,7 @@ function CoursesLoading() {
 }
 
 export default function CoursesPage() {
-  const auth = useAuth();
-  const { user, isUserLoading } = useUser(auth);
+  const { user, isUserLoading } = useUser();
   const router = useRouter();
 
   useEffect(() => {

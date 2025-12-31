@@ -6,8 +6,7 @@ import { useAccelerometer } from '@/hooks/use-accelerometer';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { Vibrate, VibrateOff } from 'lucide-react';
-import { useUser } from '@/lib/auth';
-import { useAuth, useFirestore } from '@/firebase/client-provider';
+import { useUser, useAuth, useFirestore } from '@/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 
 export function AccelerometerVisualizer() {
@@ -19,7 +18,7 @@ export function AccelerometerVisualizer() {
 
     const auth = useAuth();
     const db = useFirestore();
-    const user = useUser(auth);
+    const { user } = useUser();
 
     React.useEffect(() => {
         if (data && data.x !== null && data.y !== null && data.z !== null) {

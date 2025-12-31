@@ -6,11 +6,9 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut as firebaseSignOut,
-  onAuthStateChanged,
   User
 } from 'firebase/auth';
 import { doc, setDoc, updateDoc, type Firestore } from 'firebase/firestore';
-import { useState, useEffect } from 'react';
 
 export async function signUp(auth: Auth, email: string, password: string) {
   return await createUserWithEmailAndPassword(auth, email, password);
@@ -44,22 +42,4 @@ export async function updateUserLocation(db: Firestore, uid: string, location: {
     if (!uid) return;
     const userRef = doc(db, 'users', uid);
     return await updateDoc(userRef, { last_location: location });
-}
-
-export function useUser(auth: Auth | null) {
-  const [user, setUser] = useState<User | null | undefined>(undefined);
-
-  useEffect(() => {
-    if (auth) {
-      const unsubscribe = onAuthStateChanged(auth, (user) => {
-        setUser(user);
-      });
-
-      return () => unsubscribe();
-    } else {
-        setUser(null);
-    }
-  }, [auth]);
-
-  return user;
 }
