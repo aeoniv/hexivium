@@ -1,3 +1,5 @@
+
+import { cn } from "@/lib/utils";
 import type { SVGProps } from "react";
 
 export default function IChingIcon(props: SVGProps<SVGSVGElement>) {

@@ -4,9 +4,9 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import KungFuIcon from './icons/kung-fu-icon';
-import MedicineIcon from './icons/medicine-icon';
-import IChingIcon from './icons/i-ching-icon';
+import KungFuIcon from '@/components/icons/kung-fu-icon';
+import MedicineIcon from '@/components/icons/medicine-icon';
+import IChingIcon from '@/components/icons/i-ching-icon';
 import { useTranslation } from '@/context/language-context';
 
 export default function ActivitiesSection() {

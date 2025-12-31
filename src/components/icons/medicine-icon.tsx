@@ -1,3 +1,4 @@
+
 import type { SVGProps } from "react";
 
 export default function MedicineIcon(props: SVGProps<SVGSVGElement>) {
