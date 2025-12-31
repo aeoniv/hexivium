@@ -61,6 +61,7 @@ function UserCard({ user }: { user: UserProfile }) {
           <div className="text-left flex-1">
             <p className="font-bold text-lg text-foreground">{user.displayName || t('nameUnavailable')}</p>
             <p className="text-sm text-muted-foreground">{user.email || t('emailUnavailable')}</p>
+            {user.phone && <p className="text-sm text-muted-foreground">{user.phone}</p>}
           </div>
           <div className="flex items-center gap-4 text-left sm:text-right w-full sm:w-auto mt-4 sm:mt-0">
              <Badge variant={bookingCount > 0 ? "default" : "outline"} className="ml-auto sm:ml-0 h-fit">

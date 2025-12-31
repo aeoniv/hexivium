@@ -73,7 +73,7 @@ export default function SignupForm() {
     try {
       await updateProfile(user, { displayName: data.displayName });
       
-      await createUserDocument(firestore, user);
+      await createUserDocument(firestore, user, { displayName: data.displayName, phone: data.phone });
 
       toast({
         title: t('accountCreated'),

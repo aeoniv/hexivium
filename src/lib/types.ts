@@ -86,6 +86,7 @@ export type UserProfile = {
   id: string;
   displayName: string;
   email: string;
+  phone?: string;
   energyBalance: number;
 };
 
