@@ -4,15 +4,14 @@
 import { useState, useEffect } from 'react';
 import { FloatingNav } from '@/components/floating-nav';
 import { useGlobal } from '@/contexts/global-state-context';
-import { FloatingAgent } from './floating-agent';
 import { GlobalCameraModal } from './global-camera-modal';
-import { useUser, useAuth, useStorage, useFirestore } from '@/firebase';
+import { useUser, useFirestore, useStorage } from '@/firebase';
 import { useToast } from '@/hooks/use-toast';
 import { ref, uploadString } from "firebase/storage";
 import { doc, updateDoc } from 'firebase/firestore';
 import { getDocWithRetry, isBrowserOnline } from '@/lib/firestore-utils';
 
-export function GlobalLayout({ children }: { children: React.ReactNode }) {
+export default function MainLayout({ children }: { children: React.ReactNode }) {
   const {
     mode, setMode,
     transitionTime, setTransitionTime,
@@ -22,28 +21,22 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
     highlightMode, setHighlightMode,
   } = useGlobal();
 
-  const [hasMounted, setHasMounted] = useState(false);
+  const { user } = useUser();
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const [isCapturing, setIsCapturing] = useState(false);
   const [captureProgress, setCaptureProgress] = useState(0);
   const [lastCaptureTime, setLastCaptureTime] = useState<number | null>(null);
 
   const { toast } = useToast();
-  const auth = useAuth();
   const db = useFirestore();
   const storage = useStorage();
-  const { user } = useUser();
-
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
 
   useEffect(() => {
     if (!user || !db) return;
     let cancelled = false;
     (async () => {
       if (!isBrowserOnline()) {
-        console.warn('[GlobalLayout] Browser reported offline before initial lastCaptureAt fetch');
+        console.warn('[MainLayout] Browser reported offline before initial lastCaptureAt fetch');
         return;
       }
       try {
@@ -56,7 +49,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           }
         }
       } catch (err: any) {
-        console.warn('[GlobalLayout] Failed to fetch lastCaptureAt', { code: err?.code, message: err?.message });
+        console.warn('[MainLayout] Failed to fetch lastCaptureAt', { code: err?.code, message: err?.message });
       }
     })();
     return () => { cancelled = true; };
@@ -118,8 +111,8 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      {hasMounted && (
-        <FloatingNav
+      <FloatingNav
+          user={user}
           mode={mode}
           setMode={setMode}
           transitionTime={transitionTime}
@@ -130,13 +123,8 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           sunActiveLine={sunActiveLine}
           highlightMode={highlightMode}
           setHighlightMode={setHighlightMode}
-          onCameraClick={() => setIsCameraOpen(true)}
-          isCapturing={isCapturing}
-          captureProgress={captureProgress}
         />
-      )}
       {children}
-      <FloatingAgent />
       <GlobalCameraModal 
         isOpen={isCameraOpen}
         onClose={() => setIsCameraOpen(false)}

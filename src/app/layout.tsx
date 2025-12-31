@@ -4,7 +4,6 @@ import { Rajdhani, Playfair_Display, PT_Sans } from 'next/font/google'
 import Script from 'next/script';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
-import { GlobalLayout } from '@/components/global-layout';
 import { CalendarProvider } from '@/contexts/calendar-context';
 import { GlobalStateProvider } from '@/contexts/global-state-context';
 import { ThemeProvider } from '@/contexts/theme-provider';
@@ -13,6 +12,7 @@ import ChunkErrorReloader from '@/components/chunk-error-reloader';
 import { LanguageProvider } from '@/context/language-context';
 import { Analytics } from '@vercel/analytics/react';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
+import MainLayout from '@/components/main-layout';
 
 const rajdhani = Rajdhani({
   subsets: ['latin'],
@@ -100,10 +100,10 @@ export default function RootLayout({
               <AgentProvider>
                 <GlobalStateProvider>
                   <CalendarProvider>
-                    <GlobalLayout>
+                    <MainLayout>
                       <ChunkErrorReloader />
                       {children}
-                    </GlobalLayout>
+                    </MainLayout>
                   </CalendarProvider>
                 </GlobalStateProvider>
               </AgentProvider>

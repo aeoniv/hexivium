@@ -1,4 +1,5 @@
 
+
 import Hero from '@/components/hero';
 import AboutSection from '@/components/about-section';
 import ActivitiesSection from '@/components/activities-section';
@@ -12,12 +13,10 @@ import Footer from '@/components/footer';
 import UserDashboardOrCTA from '@/components/user-dashboard-or-cta';
 import { Analytics } from "@vercel/analytics/react"
 import HostingSection from '@/components/hosting-section';
-import FloatingNav from '@/components/floating-nav';
 
 export function EventsPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
-      <FloatingNav />
       <main className="flex-1">
         <Hero />
         <AboutSection />
