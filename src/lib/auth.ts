@@ -8,7 +8,9 @@ import {
   signOut as firebaseSignOut,
   User
 } from 'firebase/auth';
-import { doc, setDoc, updateDoc, type Firestore } from 'firebase/firestore';
+import { doc, setDoc, type Firestore } from 'firebase/firestore';
+import { useFirestore } from '@/firebase/client-provider';
+import { useState, useEffect } from 'react';
 
 export async function signUp(auth: Auth, email: string, password: string) {
   return await createUserWithEmailAndPassword(auth, email, password);
@@ -41,5 +43,5 @@ export async function createUserDocument(db: Firestore, user: User, location: { 
 export async function updateUserLocation(db: Firestore, uid: string, location: { latitude: number, longitude: number }) {
     if (!uid) return;
     const userRef = doc(db, 'users', uid);
-    return await updateDoc(userRef, { last_location: location });
+    return await setDoc(userRef, { last_location: location }, { merge: true });
 }

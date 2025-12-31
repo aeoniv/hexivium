@@ -13,7 +13,7 @@ import { type TrainingToolData } from '@/lib/training-tools';
 import { type FurnitureData } from '@/lib/furniture';
 import { type KungFuWeaponData } from '@/lib/kung-fu-weapons';
 import { type StructureData } from '@/lib/structures';
-import { doc, updateDoc, Firestore } from 'firebase/firestore';
+import { doc, setDoc, Firestore } from 'firebase/firestore';
 import { getDocWithRetry } from '@/lib/firestore-utils';
 import type { User } from 'firebase/auth';
 
@@ -93,11 +93,11 @@ interface AgentState {
   placeObject(hex: AgentCube, object: ObjectData | TrainingToolData | KungFuWeaponData): void;
   placeFurniture(hex: AgentCube, furniture: FurnitureData): void;
   placeStructure(hex: AgentCube, structure: StructureData): void;
-  loadSpiralMapData(db: Firestore, user: User): Promise<void>;
+  loadSpiralMapData(db: Firestore, user: User | null): Promise<void>;
   resetCastingState: () => void;
   updateShenOnClick(db: Firestore, user: User | null): void;
   startGameClock(db: Firestore, user: User | null): Promise<void>;
-  loadGameClock(db: Firestore, user: User): Promise<void>;
+  loadGameClock(db: Firestore, user: User | null): Promise<void>;
   setBackgroundView(view: BackgroundView): void;
   setListeningUserChoice(isListening: boolean): void;
   setSelectedCircle(index: number | null): void;
@@ -375,15 +375,15 @@ export const useAgentStore = create<AgentState>((set, get) => ({
         };
     });
   },
-  loadSpiralMapData: async (db: Firestore, user: User) => {
-    if (!user || get().hasLoadedInitialData) {
+  loadSpiralMapData: async (db: Firestore, user: User | null) => {
+    if (!user || !user.uid || get().hasLoadedInitialData) {
       return;
     }
     set({ hasLoadedInitialData: true });
 
     try {
       const profileRef = doc(db, 'users', user.uid, 'profiles', 'm3_profile1');
-  const docSnap = await getDocWithRetry(profileRef, { retries: 2 });
+      const docSnap = await getDocWithRetry(profileRef, { retries: 2 });
 
       if (!docSnap.exists()) {
         console.warn("Profile 'm3_profile1' not found. Grid will be unpopulated.");
@@ -448,14 +448,14 @@ export const useAgentStore = create<AgentState>((set, get) => ({
     if (user && db) {
       try {
         const userRef = doc(db, 'users', user.uid);
-        await updateDoc(userRef, { gameStartedAt: newStartTime });
+        await setDoc(userRef, { gameStartedAt: newStartTime }, { merge: true });
       } catch (error) {
         console.error("Failed to save game start time to Firestore:", error);
       }
     }
   },
-  loadGameClock: async (db: Firestore, user: User) => {
-    if (!user || !db) return;
+  loadGameClock: async (db: Firestore, user: User | null) => {
+    if (!user || !user.uid || !db) return;
     try {
         const userRef = doc(db, 'users', user.uid);
   const docSnap = await getDocWithRetry(userRef, { retries: 2 });
@@ -473,3 +473,4 @@ export const useAgentStore = create<AgentState>((set, get) => ({
   setListeningUserChoice: (isListening: boolean) => set({ listeningUserChoice: isListening }),
   setSelectedCircle: (index: number | null) => set({ selectedCircle: index }),
 }));
+

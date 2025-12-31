@@ -8,7 +8,7 @@ import { GlobalCameraModal } from './global-camera-modal';
 import { useUser, useFirestore, useStorage } from '@/firebase';
 import { useToast } from '@/hooks/use-toast';
 import { ref, uploadString } from "firebase/storage";
-import { doc, updateDoc } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 import { getDocWithRetry, isBrowserOnline } from '@/lib/firestore-utils';
 import { FloatingAgent } from './floating-agent';
 
@@ -91,7 +91,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       const storageRef = ref(storage, `users/${user.uid}/general_captures/${newCaptureTime}.jpg`);
       await uploadString(storageRef, dataUrl, 'data_url');
       const userRef = doc(db, 'users', user.uid);
-      await updateDoc(userRef, { lastCaptureAt: newCaptureTime });
+      await setDoc(userRef, { lastCaptureAt: newCaptureTime }, { merge: true });
       setLastCaptureTime(newCaptureTime);
       toast({
         title: "Capture Saved!",
