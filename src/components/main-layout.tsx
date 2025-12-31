@@ -10,6 +10,7 @@ import { useToast } from '@/hooks/use-toast';
 import { ref, uploadString } from "firebase/storage";
 import { doc, updateDoc } from 'firebase/firestore';
 import { getDocWithRetry, isBrowserOnline } from '@/lib/firestore-utils';
+import { FloatingAgent } from './floating-agent';
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   const {
@@ -112,18 +113,22 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <FloatingNav
-          user={user}
-          mode={mode}
-          setMode={setMode}
-          transitionTime={transitionTime}
-          setTransitionTime={setTransitionTime}
-          autoSequenceName={autoSequenceName}
-          setAutoSequenceName={setAutoSequenceName}
-          sunHexagramId={sunHexagramId}
-          sunActiveLine={sunActiveLine}
-          highlightMode={highlightMode}
-          setHighlightMode={setHighlightMode}
-        />
+        user={user}
+        mode={mode}
+        setMode={setMode}
+        transitionTime={transitionTime}
+        setTransitionTime={setTransitionTime}
+        autoSequenceName={autoSequenceName}
+        setAutoSequenceName={setAutoSequenceName}
+        sunHexagramId={sunHexagramId}
+        sunActiveLine={sunActiveLine}
+        highlightMode={highlightMode}
+        setHighlightMode={setHighlightMode}
+        onCameraClick={() => setIsCameraOpen(true)}
+        isCapturing={isCapturing}
+        captureProgress={captureProgress}
+      />
+      <FloatingAgent />
       {children}
       <GlobalCameraModal 
         isOpen={isCameraOpen}
