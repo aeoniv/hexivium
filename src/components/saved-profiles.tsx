@@ -2,8 +2,7 @@
 'use client';
 
 import * as React from 'react';
-import { useAuth, useFirestore } from '@/firebase/client-provider';
-import { useUser } from '@/lib/auth';
+import { useAuth, useFirestore, useUser } from '@/firebase';
 import { collection, getDocs, query, orderBy, limit, doc } from 'firebase/firestore';
 import { getDocWithRetry, isBrowserOnline } from '@/lib/firestore-utils';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -27,7 +26,7 @@ interface FullResult {
 export function SavedProfiles() {
     const auth = useAuth();
     const db = useFirestore();
-    const user = useUser(auth);
+    const { user } = useUser();
     const { toast } = useToast();
     const [profiles, setProfiles] = React.useState<Profile[]>([]);
     const [selectedResult, setSelectedResult] = React.useState<FullResult | null>(null);

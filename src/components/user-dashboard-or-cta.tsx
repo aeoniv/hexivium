@@ -6,8 +6,7 @@ import EnergyDashboardSection from './energy-dashboard-section';
 import ClassScheduleSection from './class-schedule-section';
 import EnergyMarketplaceSection from './energy-marketplace-section';
 import { Skeleton } from '@/components/ui/skeleton';
-import { useUser } from '@/lib/auth';
-import { useAuth } from '@/firebase/client-provider';
+import { useUser } from '@/firebase';
 
 function DashboardLoading() {
     return (
@@ -20,10 +19,9 @@ function DashboardLoading() {
   }
 
 export default function UserDashboardOrCTA() {
-  const auth = useAuth();
-  const user = useUser(auth);
+  const { user, isUserLoading } = useUser();
 
-  if (user === undefined) {
+  if (isUserLoading) {
     return <DashboardLoading />;
   }
 

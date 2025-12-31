@@ -6,8 +6,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { format, parse } from 'date-fns';
-import { useAuth, useFirestore } from '@/firebase/client-provider';
-import { useUser } from '@/lib/auth';
+import { useAuth, useFirestore, useUser } from '@/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import { toZonedTime } from 'date-fns-tz';
 
@@ -35,7 +34,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 export function HumanDesignTransitForm() {
     const auth = useAuth();
-    const user = useUser(auth);
+    const { user } = useUser();
     const db = useFirestore();
     const { toast } = useToast();
     const [isLoading, setIsLoading] = React.useState(false);
