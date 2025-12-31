@@ -1,8 +1,9 @@
+
 'use client';
 
 import React, { createContext, useContext, ReactNode, useMemo, useEffect, useState } from 'react';
 import { Auth, getAuth } from 'firebase/auth';
-import { Firestore, getFirestore, initializeFirestore } from 'firebase/firestore';
+import { Firestore, initializeFirestore } from 'firebase/firestore';
 import { FirebaseStorage, getStorage } from 'firebase/storage';
 import { getOrInitializeApp } from '@/lib/firebase';
 import type { FirebaseApp } from 'firebase/app';
@@ -31,7 +32,7 @@ function FirebaseProvider({ children }: { children: ReactNode }) {
       }
       
       const auth = getAuth(app);
-      // Use initializeFirestore for more robust setup options
+      // Use initializeFirestore with long polling to prevent offline errors.
       const db = initializeFirestore(app, {
         experimentalForceLongPolling: true,
       });

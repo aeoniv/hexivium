@@ -2,7 +2,8 @@
 'use client';
 
 import { useAuth } from '@/firebase/client-provider';
-import { useUser, signOut } from '@/lib/auth';
+import { useUser } from '@/lib/auth';
+import { signOut } from 'firebase/auth';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import {
@@ -25,6 +26,15 @@ export function UserNav() {
       await signOut(auth);
     }
   };
+
+  if (user === undefined) {
+    return (
+        <div className="flex items-center gap-2">
+            <div className="w-20 h-8 bg-muted rounded-md animate-pulse" />
+            <div className="w-20 h-8 bg-muted rounded-md animate-pulse" />
+        </div>
+    );
+  }
 
   if (!user) {
     return (
@@ -62,12 +72,16 @@ export function UserNav() {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            Profile
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            Settings
-          </DropdownMenuItem>
+          <Link href="/profile" passHref>
+             <DropdownMenuItem>
+                Profile
+              </DropdownMenuItem>
+          </Link>
+          <Link href="/settings" passHref>
+            <DropdownMenuItem>
+                Settings
+            </DropdownMenuItem>
+          </Link>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={handleSignOut}>

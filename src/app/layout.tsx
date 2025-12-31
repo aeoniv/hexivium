@@ -1,23 +1,37 @@
 
 import type {Metadata} from 'next';
-import { Rajdhani } from 'next/font/google'
+import { Rajdhani, Playfair_Display, PT_Sans } from 'next/font/google'
+import Script from 'next/script';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import { GlobalLayout } from '@/components/global-layout';
 import { CalendarProvider } from '@/contexts/calendar-context';
 import { GlobalStateProvider } from '@/contexts/global-state-context';
-import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { ThemeProvider } from '@/contexts/theme-provider';
 import { AgentProvider } from '@/contexts/agent-context';
 import ChunkErrorReloader from '@/components/chunk-error-reloader';
 import { LanguageProvider } from '@/context/language-context';
 import { Analytics } from '@vercel/analytics/react';
+import { FirebaseClientProvider } from '@/firebase/client-provider';
 
 const rajdhani = Rajdhani({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-rajdhani',
 });
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['700'],
+  variable: '--font-playfair',
+});
+
+const ptSans = PT_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-pt-sans',
+});
+
 
 const siteTitle = 'Jornada Shaolin de Verão | Acampamento de Kung Fu';
 const siteDescription = 'Participe de um acampamento de verão imersivo em Kung Fu, Medicina Chinesa e I-Ching com o mestre Shi Heng Yong Yi em João Pessoa.';
@@ -76,16 +90,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
-      <body className={`${rajdhani.variable} font-body antialiased`}>
+      <head>
+        <Script src="https://js.stripe.com/v3/" strategy="beforeInteractive" />
+      </head>
+      <body className={`${rajdhani.variable} ${playfair.variable} ${ptSans.variable} font-body antialiased`}>
         <ThemeProvider>
           <FirebaseClientProvider>
-             <LanguageProvider>
+            <LanguageProvider>
               <AgentProvider>
                 <GlobalStateProvider>
                   <CalendarProvider>
                     <GlobalLayout>
-                      {/* Auto-reload on transient chunk load failures (dev/reload safety) */}
                       <ChunkErrorReloader />
                       {children}
                     </GlobalLayout>

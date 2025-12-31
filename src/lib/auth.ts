@@ -1,5 +1,4 @@
 
-
 'use client';
 
 import {
@@ -11,7 +10,6 @@ import {
   User
 } from 'firebase/auth';
 import { doc, setDoc, updateDoc, type Firestore } from 'firebase/firestore';
-import { useFirestore } from '@/firebase/client-provider';
 import { useState, useEffect } from 'react';
 
 export async function signUp(auth: Auth, email: string, password: string) {
@@ -49,7 +47,7 @@ export async function updateUserLocation(db: Firestore, uid: string, location: {
 }
 
 export function useUser(auth: Auth | null) {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null | undefined>(undefined);
 
   useEffect(() => {
     if (auth) {
@@ -58,6 +56,8 @@ export function useUser(auth: Auth | null) {
       });
 
       return () => unsubscribe();
+    } else {
+        setUser(null);
     }
   }, [auth]);
 

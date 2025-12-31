@@ -1,20 +1,17 @@
 
-
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FloatingMenu } from './floating-menu';
+import { FloatingNav } from '@/components/floating-nav';
 import { useGlobal } from '@/contexts/global-state-context';
 import { FloatingAgent } from './floating-agent';
 import { GlobalCameraModal } from './global-camera-modal';
 import { useUser } from '@/lib/auth';
-import { useAuth } from '@/firebase/client-provider';
-import { ref, uploadString } from "firebase/storage";
-import { useStorage, useFirestore } from '@/firebase/client-provider';
+import { useAuth, useStorage, useFirestore } from '@/firebase';
 import { useToast } from '@/hooks/use-toast';
+import { ref, uploadString } from "firebase/storage";
 import { doc, updateDoc } from 'firebase/firestore';
 import { getDocWithRetry, isBrowserOnline } from '@/lib/firestore-utils';
-
 
 export function GlobalLayout({ children }: { children: React.ReactNode }) {
   const {
@@ -40,12 +37,15 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setHasMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!user || !db) return;
     let cancelled = false;
     (async () => {
-      if (!user) return;
       if (!isBrowserOnline()) {
         console.warn('[GlobalLayout] Browser reported offline before initial lastCaptureAt fetch');
-        return; // Let user actions trigger later retry implicitly.
+        return;
       }
       try {
         const userRef = doc(db, 'users', user.uid);
@@ -73,12 +73,10 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
       const elapsed = Date.now() - lastCaptureTime;
       const progress = Math.max(0, 100 - (elapsed / twentyFourHours) * 100);
       setCaptureProgress(progress);
-
       if (progress <= 0) {
         clearInterval(timer);
       }
     }, 1000);
-
     return () => clearInterval(timer);
   }, [lastCaptureTime]);
 
@@ -99,17 +97,9 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
       const newCaptureTime = Date.now();
       const storageRef = ref(storage, `users/${user.uid}/general_captures/${newCaptureTime}.jpg`);
       await uploadString(storageRef, dataUrl, 'data_url');
-
       const userRef = doc(db, 'users', user.uid);
-      try {
-        await updateDoc(userRef, { lastCaptureAt: newCaptureTime });
-      } catch (err: any) {
-        console.warn('[GlobalLayout] updateDoc(lastCaptureAt) failed', { code: err?.code, message: err?.message });
-        throw err; // Let outer catch show toast.
-      }
-
+      await updateDoc(userRef, { lastCaptureAt: newCaptureTime });
       setLastCaptureTime(newCaptureTime);
-
       toast({
         title: "Capture Saved!",
         description: "Your 24-hour cycle has reset.",
@@ -122,29 +112,28 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
         description: "Could not save your capture.",
       });
     } finally {
-        setIsCapturing(false);
-        setIsCameraOpen(false);
+      setIsCapturing(false);
+      setIsCameraOpen(false);
     }
   };
-
 
   return (
     <>
       {hasMounted && (
-        <FloatingMenu
-            mode={mode}
-            setMode={setMode}
-            transitionTime={transitionTime}
-            setTransitionTime={setTransitionTime}
-            autoSequenceName={autoSequenceName}
-              setAutoSequenceName={setAutoSequenceName}
-            sunHexagramId={sunHexagramId}
-            sunActiveLine={sunActiveLine}
-            highlightMode={highlightMode}
-            setHighlightMode={setHighlightMode}
-            onCameraClick={() => setIsCameraOpen(true)}
-            isCapturing={isCapturing}
-            captureProgress={captureProgress}
+        <FloatingNav
+          mode={mode}
+          setMode={setMode}
+          transitionTime={transitionTime}
+          setTransitionTime={setTransitionTime}
+          autoSequenceName={autoSequenceName}
+          setAutoSequenceName={setAutoSequenceName}
+          sunHexagramId={sunHexagramId}
+          sunActiveLine={sunActiveLine}
+          highlightMode={highlightMode}
+          setHighlightMode={setHighlightMode}
+          onCameraClick={() => setIsCameraOpen(true)}
+          isCapturing={isCapturing}
+          captureProgress={captureProgress}
         />
       )}
       {children}
