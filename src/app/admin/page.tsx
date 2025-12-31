@@ -4,10 +4,10 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@/firebase';
-import Footer from '@/app/components/footer';
+import Footer from '@/components/footer';
 import { Skeleton } from '@/components/ui/skeleton';
 import AdminDashboard from '@/app/admin/admin-dashboard';
-import FloatingNav from '../components/floating-nav';
+import { FloatingNav } from '@/components/floating-nav';
 
 const ADMIN_EMAIL = 'shi.heng.yong.yi@gmail.com';
 
@@ -34,7 +34,7 @@ export default function AdminPage() {
     if (isUserLoading || !user || user.email !== ADMIN_EMAIL) {
         return (
           <div className="flex min-h-screen flex-col bg-background">
-            <FloatingNav />
+            {/* The main layout will render the FloatingNav, so we don't need it here explicitly */}
             <main className="flex-1">
               <AdminLoading />
             </main>
@@ -45,7 +45,7 @@ export default function AdminPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
-      <FloatingNav />
+      {/* The main layout will render the FloatingNav, so we don't need it here explicitly */}
       <main className="flex-1 pt-24">
         <AdminDashboard />
       </main>
