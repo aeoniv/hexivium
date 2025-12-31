@@ -3,10 +3,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { useUser } from '@/lib/auth';
+import { usePathname } from 'next/navigation';
+import { useAuth, useUser } from '@/firebase';
 import { getAuth, signOut } from 'firebase/auth';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Shield, Home, BookOpen, Settings } from 'lucide-react';
 import DragonflyMantisIcon from './icons/dragonfly-mantis-icon';
@@ -34,7 +34,6 @@ import { GlobalCameraModal } from './global-camera-modal';
 import { CameraProgressButton } from './camera-progress-button';
 import { useGlobal } from '@/contexts/global-state-context';
 import type { Mode, AutoSequenceName, HighlightMode } from '@/lib/types';
-import { useAuth } from '@/firebase';
 
 
 const ADMIN_EMAIL = 'shi.heng.yong.yi@gmail.com';
@@ -73,8 +72,7 @@ export function FloatingNav({
   captureProgress,
 }: FloatingNavProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const auth = useAuth();
-  const { user, isUserLoading } = useUser(auth);
+  const { user, isUserLoading } = useUser();
   const router = useRouter();
   const { t } = useTranslation();
   const isAdmin = user?.email === ADMIN_EMAIL;
@@ -101,8 +99,52 @@ export function FloatingNav({
 
   return (
     <>
-      <div className="fixed top-4 right-4 z-40">
-        <div className="flex items-center gap-2 rounded-full bg-card/80 backdrop-blur-sm border p-1">
+      <div className="fixed top-4 right-4 z-40 flex items-center gap-4">
+        <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+        <SheetTrigger asChild>
+          <Button size="icon" className="h-12 w-12 rounded-full shadow-lg md:hidden">
+            <Menu className="h-6 w-6" />
+            <span className="sr-only">{t('openMenu')}</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background">
+          <SheetHeader className="mb-8 text-left">
+            <SheetTitle>
+              <Link href="/" className="flex items-center gap-2 font-bold" onClick={closeMenu}>
+                <DragonflyMantisIcon className="h-10 w-10 text-primary" />
+                <span className="font-headline text-xl">Dragonfly Mantis</span>
+              </Link>
+            </SheetTitle>
+          </SheetHeader>
+          <div className="flex flex-col h-full">
+            <nav className="flex flex-col gap-4 text-lg font-medium">
+              {navLinks.map(link => {
+                if (link.adminOnly && !isAdmin) return null;
+                const Icon = link.icon;
+                return (
+                    <Link key={link.href} href={link.href} className="flex items-center gap-4 p-2 rounded-md hover:bg-muted transition-colors" onClick={closeMenu}>
+                      <Icon className="h-6 w-6 text-primary" />
+                      <span>{link.label}</span>
+                    </Link>
+                )
+              })}
+            </nav>
+
+            <div className="mt-6 pt-6 border-t">
+                 <h3 className="px-2 pb-4 text-lg font-medium text-foreground">{t('language')}</h3>
+                 <div className="px-2">
+                    <LanguageSelector />
+                 </div>
+            </div>
+
+            <div className="mt-auto pt-6 border-t">
+              <UserNav />
+            </div>
+          </div>
+        </SheetContent>
+      </Sheet>
+
+        <div className="hidden md:flex items-center gap-2 rounded-full bg-card/80 backdrop-blur-sm border p-1">
           <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger asChild>
@@ -202,69 +244,6 @@ export function FloatingNav({
           <UserNav />
         </div>
       </div>
-      <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-        <SheetTrigger asChild>
-          <Button size="icon" className="fixed top-4 left-4 z-50 h-16 w-16 rounded-full shadow-lg">
-            <Menu className="h-8 w-8" />
-            <span className="sr-only">{t('openMenu')}</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background">
-          <SheetHeader className="mb-8 text-left">
-            <SheetTitle>
-              <Link href="/" className="flex items-center gap-2 font-bold" onClick={closeMenu}>
-                <DragonflyMantisIcon className="h-10 w-10 text-primary" />
-                <span className="font-headline text-xl">Dragonfly Mantis</span>
-              </Link>
-            </SheetTitle>
-          </SheetHeader>
-          <div className="flex flex-col h-full">
-            <nav className="flex flex-col gap-4 text-lg font-medium">
-              {navLinks.map(link => {
-                if (link.adminOnly && !isAdmin) return null;
-                const Icon = link.icon;
-                return (
-                    <Link key={link.href} href={link.href} className="flex items-center gap-4 p-2 rounded-md hover:bg-muted transition-colors" onClick={closeMenu}>
-                      <Icon className="h-6 w-6 text-primary" />
-                      <span>{link.label}</span>
-                    </Link>
-                )
-              })}
-            </nav>
-
-            <div className="mt-6 pt-6 border-t">
-                 <h3 className="px-2 pb-4 text-lg font-medium text-foreground">{t('language')}</h3>
-                 <div className="px-2">
-                    <LanguageSelector />
-                 </div>
-            </div>
-
-            <div className="mt-auto pt-6 border-t">
-              {!isUserLoading && user ? (
-                <div className="flex flex-col gap-4">
-                  <Link href="/profile" passHref>
-                    <Button variant="outline" className="w-full justify-start" onClick={closeMenu}>
-                        {t('myProfile')}
-                    </Button>
-                  </Link>
-                  <Button onClick={() => { handleLogout(); closeMenu(); }} className="w-full justify-start">
-                    {t('logout')}
-                  </Button>
-                </div>
-              ) : !isUserLoading && !user && (
-                <div className="flex flex-col gap-4">
-                  <Link href="/login" passHref>
-                    <Button variant="outline" className='w-full justify-start' onClick={closeMenu}>{t('login')}</Button>
-                  </Link>
-                  <Link href="/signup" passHref>
-                    <Button className='w-full justify-start' onClick={closeMenu}>{t('signup')}</Button>
-                  </Link>
-                </div>
-              )}
-            </div>
-          </div>
-        </SheetContent>
-      </Sheet>
     </>
   );
 }

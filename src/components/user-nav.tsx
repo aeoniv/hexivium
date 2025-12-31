@@ -1,8 +1,7 @@
 
 'use client';
 
-import { useAuth } from '@/firebase/client-provider';
-import { useUser } from '@/lib/auth';
+import { useUser, useAuth } from '@/firebase';
 import { signOut } from 'firebase/auth';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -16,10 +15,11 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import Link from 'next/link';
+import { Skeleton } from './ui/skeleton';
 
 export function UserNav() {
   const auth = useAuth();
-  const user = useUser(auth);
+  const { user, isUserLoading } = useUser();
 
   const handleSignOut = async () => {
     if (auth) {
@@ -27,11 +27,11 @@ export function UserNav() {
     }
   };
 
-  if (user === undefined) {
+  if (isUserLoading) {
     return (
         <div className="flex items-center gap-2">
-            <div className="w-20 h-8 bg-muted rounded-md animate-pulse" />
-            <div className="w-20 h-8 bg-muted rounded-md animate-pulse" />
+            <Skeleton className="h-8 w-20" />
+            <Skeleton className="h-8 w-20" />
         </div>
     );
   }
