@@ -71,6 +71,7 @@ export default function LoginForm() {
   }, [toast, t]);
 
   const onSubmit: SubmitHandler<FormValues> = data => {
+    if (!auth) return;
     setIsSubmitting(true);
     initiateEmailSignIn(auth, data.email, data.password, handleSuccess, handleError);
   };
@@ -113,8 +114,8 @@ export default function LoginForm() {
               />
             </CardContent>
             <CardContent>
-              <Button type="submit" disabled={isSubmitting} className="w-full">
-                {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              <Button type="submit" disabled={isSubmitting || isUserLoading || !auth} className="w-full">
+                {(isSubmitting || isUserLoading) && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                 {t('loginButton')}
               </Button>
             </CardContent>
