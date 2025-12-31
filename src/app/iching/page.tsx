@@ -8,8 +8,7 @@ import { useAgentStore } from "@/hooks/use-agent-store";
 import { Wand2, UserCheck, BotMessageSquare } from "lucide-react";
 import { PlacementSelector } from "@/components/placement-selector";
 import { useToast } from "@/hooks/use-toast";
-import { useAuth, useFirestore } from "@/firebase/client-provider";
-import { useUser } from "@/lib/auth";
+import { useAuth, useFirestore, useUser } from "@/firebase";
 import { GameStatusMatrix } from "@/components/game-status-matrix";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
