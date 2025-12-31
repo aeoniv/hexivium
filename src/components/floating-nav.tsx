@@ -4,9 +4,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useAuth, useUser } from '@/firebase';
-import { getAuth, signOut } from 'firebase/auth';
+import { useUser, useAuth } from '@/firebase';
+import { signOut } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
+
+import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Shield, Home, BookOpen, Settings } from 'lucide-react';
 import DragonflyMantisIcon from './icons/dragonfly-mantis-icon';
@@ -21,7 +23,6 @@ import { LiveClock } from './live-clock';
 import { CalendarSettings } from './calendar-settings';
 import { HumanDesignTransitForm } from './human-design-transit-form';
 import { SavedProfiles } from './saved-profiles';
-import { Icons } from './icons';
 import { UserNav } from './user-nav';
 import { BaguaInfo } from './bagua-info';
 import { BackgroundViewToggle } from './background-view-toggle';
@@ -30,14 +31,10 @@ import { Label } from './ui/label';
 import { Tooltip, TooltipProvider, TooltipTrigger, TooltipContent } from './ui/tooltip';
 import { ThemeToggle } from './theme-toggle';
 import { AccelerometerVisualizer } from './accelerometer-visualizer';
-import { GlobalCameraModal } from './global-camera-modal';
 import { CameraProgressButton } from './camera-progress-button';
-import { useGlobal } from '@/contexts/global-state-context';
 import type { Mode, AutoSequenceName, HighlightMode } from '@/lib/types';
 
-
 const ADMIN_EMAIL = 'shi.heng.yong.yi@gmail.com';
-
 
 interface FloatingNavProps {
   mode: Mode;
@@ -72,6 +69,7 @@ export function FloatingNav({
   captureProgress,
 }: FloatingNavProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const auth = useAuth();
   const { user, isUserLoading } = useUser();
   const router = useRouter();
   const { t } = useTranslation();
@@ -90,9 +88,10 @@ export function FloatingNav({
   ];
 
   const handleLogout = async () => {
-    const auth = getAuth();
-    await signOut(auth);
-    router.push('/');
+    if (auth) {
+      await signOut(auth);
+      router.push('/');
+    }
   };
 
   const closeMenu = () => setMobileMenuOpen(false);
